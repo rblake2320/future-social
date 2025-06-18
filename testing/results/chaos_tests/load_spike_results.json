@@ -1,0 +1,20 @@
+[
+  {
+    "endpoint": "GET /feed",
+    "num_requests": 50,
+    "duration_seconds": 0.06345677375793457,
+    "successful_requests": 50,
+    "failed_requests": 0,
+    "success_rate": 1.0,
+    "avg_latency_ms": 29.90825123995819
+  },
+  {
+    "endpoint": "GET /users/<int:user_id>",
+    "num_requests": 50,
+    "duration_seconds": 0.062530517578125,
+    "successful_requests": 50,
+    "failed_requests": 0,
+    "success_rate": 1.0,
+    "avg_latency_ms": 30.90194894006345
+  }
+]

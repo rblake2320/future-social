@@ -1,0 +1,49 @@
+{
+  "journey": "Direct Messaging",
+  "scenario": "Error Handling - Direct Messaging",
+  "steps_total": 2,
+  "steps_passed": 2,
+  "success_rate": 1.0,
+  "status": "pass",
+  "step_results": [
+    {
+      "id": "dc0d6d63",
+      "action": "Invalid Start new conversation",
+      "method": "POST",
+      "path": "/conversations",
+      "input": {
+        "id": 9999
+      },
+      "expected_result": "Error",
+      "status_code": 400,
+      "response": {
+        "success": false,
+        "message": "Operation failed"
+      },
+      "duration_ms": 122.64633178710938,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:34.450679"
+    },
+    {
+      "id": "4df86c65",
+      "action": "Invalid Send message",
+      "method": "POST",
+      "path": "/conversations/<int:conversation_id>/messages",
+      "input": {
+        "content": "",
+        "sender_id": 999,
+        "recipient_id": 999
+      },
+      "expected_result": "Error",
+      "status_code": 400,
+      "response": {
+        "success": false,
+        "message": "Operation failed"
+      },
+      "duration_ms": 69.32735443115234,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:34.520485"
+    }
+  ],
+  "timestamp": "2025-06-17T20:20:34.520526"
+}

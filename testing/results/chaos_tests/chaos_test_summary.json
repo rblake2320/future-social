@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-17T20:35:00.717069",
+  "mock_mode": true,
+  "network_failure_tests": 3,
+  "malformed_input_tests": 15,
+  "load_spike_tests": 2,
+  "dependency_failure_tests": 7,
+  "resource_exhaustion_tests": 3,
+  "report_file": "/home/ubuntu/fs_project/testing/results/chaos_tests/chaos_test_report.md"
+}

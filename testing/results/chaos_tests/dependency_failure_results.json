@@ -1,0 +1,62 @@
+[
+  {
+    "dependency": "database",
+    "service": "all",
+    "results": [
+      {
+        "endpoint": "GET /users/<int:user_id>",
+        "status_code": 500,
+        "error": "Simulated database failure",
+        "graceful_handling": false
+      },
+      {
+        "endpoint": "GET /posts",
+        "status_code": 500,
+        "error": "Simulated database failure",
+        "graceful_handling": false
+      },
+      {
+        "endpoint": "GET /feed",
+        "status_code": 503,
+        "error": "Simulated database failure",
+        "graceful_handling": true
+      }
+    ]
+  },
+  {
+    "dependency": "cache",
+    "service": "all",
+    "results": [
+      {
+        "endpoint": "GET /feed",
+        "status_code": 500,
+        "error": "Simulated cache failure",
+        "graceful_handling": false
+      },
+      {
+        "endpoint": "GET /ai/recommendations",
+        "status_code": 503,
+        "error": "Simulated cache failure",
+        "graceful_handling": true
+      }
+    ]
+  },
+  {
+    "dependency": "external_auth",
+    "service": "user_service",
+    "results": [
+      {
+        "endpoint": "POST /users/login",
+        "status_code": 503,
+        "error": "Simulated external_auth failure",
+        "graceful_handling": true
+      },
+      {
+        "endpoint": "POST /users/register",
+        "status_code": 500,
+        "error": "Simulated external_auth failure",
+        "graceful_handling": false
+      }
+    ]
+  }
+]

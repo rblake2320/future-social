@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-17T20:39:56.147785",
+  "mock_mode": true,
+  "authentication_tests": 3,
+  "authorization_tests": 3,
+  "injection_tests": 4,
+  "data_protection_tests": 3,
+  "configuration_tests": 3,
+  "report_file": "/home/ubuntu/fs_project/testing/results/security_tests/security_test_report.md"
+}

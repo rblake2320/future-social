@@ -1,0 +1,8 @@
+{
+  "timestamp": "2025-06-17T19:58:32.191395",
+  "status": "success",
+  "baseline_metrics_file": "/home/ubuntu/fs_project/testing/baseline_metrics.json",
+  "monitoring_config_file": "/home/ubuntu/fs_project/testing/monitoring_config.json",
+  "monitoring_active": true,
+  "monitoring_dir": "/home/ubuntu/fs_project/testing/results/monitoring"
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "journey": "User Authentication",
+    "file": "/home/ubuntu/fs_project/testing/results/user_journeys/user_authentication_flowchart.puml"
+  },
+  {
+    "journey": "Content Creation and Viewing",
+    "file": "/home/ubuntu/fs_project/testing/results/user_journeys/content_creation_and_viewing_flowchart.puml"
+  },
+  {
+    "journey": "Direct Messaging",
+    "file": "/home/ubuntu/fs_project/testing/results/user_journeys/direct_messaging_flowchart.puml"
+  },
+  {
+    "journey": "Group Interaction",
+    "file": "/home/ubuntu/fs_project/testing/results/user_journeys/group_interaction_flowchart.puml"
+  }
+]

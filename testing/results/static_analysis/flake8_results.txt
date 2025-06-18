@@ -1,0 +1,306 @@
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:3:1: F401 'flask_sqlalchemy.SQLAlchemy' imported but unused
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:7:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:27:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:71:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:93:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:140:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:144:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:146:68: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:147:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:151:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:155:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:169:18: E111 indentation is not a multiple of 4
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:169:18: E117 over-indented
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:178:127: B950 line too long (126 > 100 characters)
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:182:92: W291 trailing whitespace
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:191:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:192:32: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:193:83: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:193:125: B950 line too long (124 > 100 characters)
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:206:142: B950 line too long (141 > 100 characters)
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:210:1: E305 expected 2 blank lines after class or function definition, found 1
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:215:1: W391 blank line at end of file
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:7:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:13:76: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:13:123: B950 line too long (122 > 100 characters)
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:14:59: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:16:68: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:21:150: B950 line too long (149 > 100 characters)
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:53:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:59:61: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:65:113: B950 line too long (112 > 100 characters)
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:77:36: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:78:18: E111 indentation is not a multiple of 4
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:78:18: E117 over-indented
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:88:71: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:101:116: B950 line too long (115 > 100 characters)
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:110:1: E303 too many blank lines (5)
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:114:65: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:158:1: W391 blank line at end of file
+/home/ubuntu/fs_project/src/group_service/app.py:3:1: F401 'flask_sqlalchemy.SQLAlchemy' imported but unused
+/home/ubuntu/fs_project/src/group_service/app.py:4:53: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/app.py:6:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/group_service/app.py:23:44: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/app.py:28:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/group_service/app.py:37:44: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/app.py:39:9: F841 local variable 'e' is assigned to but never used
+/home/ubuntu/fs_project/src/group_service/app.py:60:38: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/app.py:68:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/group_service/app.py:71:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/group_service/app.py:74:36: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/app.py:76:9: F841 local variable 'e' is assigned to but never used
+/home/ubuntu/fs_project/src/group_service/app.py:84:38: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/app.py:92:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/group_service/app.py:95:14: E114 indentation is not a multiple of 4 (comment)
+/home/ubuntu/fs_project/src/group_service/app.py:95:14: E117 over-indented (comment)
+/home/ubuntu/fs_project/src/group_service/app.py:96:145: B950 line too long (144 > 100 characters)
+/home/ubuntu/fs_project/src/group_service/app.py:99:40: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/app.py:101:9: F841 local variable 'e' is assigned to but never used
+/home/ubuntu/fs_project/src/group_service/app.py:123:52: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/app.py:131:1: E305 expected 2 blank lines after class or function definition, found 1
+/home/ubuntu/fs_project/src/group_service/app.py:135:35: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/app.py:136:1: W391 blank line at end of file
+/home/ubuntu/fs_project/src/group_service/models.py:7:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/group_service/models.py:13:55: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/models.py:16:52: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/models.py:36:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/group_service/models.py:48:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/group_service/models.py:53:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/group_service/models.py:59:54: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/models.py:98:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/group_service/models.py:105:117: B950 line too long (116 > 100 characters)
+/home/ubuntu/fs_project/src/group_service/models.py:106:1: W391 blank line at end of file
+/home/ubuntu/fs_project/src/messaging_service/app.py:3:1: F401 'flask_sqlalchemy.SQLAlchemy' imported but unused
+/home/ubuntu/fs_project/src/messaging_service/app.py:4:56: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/messaging_service/app.py:6:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/messaging_service/app.py:26:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/messaging_service/app.py:33:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/messaging_service/app.py:41:9: F841 local variable 'e' is assigned to but never used
+/home/ubuntu/fs_project/src/messaging_service/app.py:48:42: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/messaging_service/app.py:57:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/messaging_service/app.py:62:116: B950 line too long (115 > 100 characters)
+/home/ubuntu/fs_project/src/messaging_service/app.py:64:37: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/messaging_service/app.py:66:9: F841 local variable 'e' is assigned to but never used
+/home/ubuntu/fs_project/src/messaging_service/app.py:76:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/messaging_service/app.py:93:1: E305 expected 2 blank lines after class or function definition, found 1
+/home/ubuntu/fs_project/src/messaging_service/app.py:97:35: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/messaging_service/app.py:98:1: W391 blank line at end of file
+/home/ubuntu/fs_project/src/messaging_service/models.py:7:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/messaging_service/models.py:14:57: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/messaging_service/models.py:24:70: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/messaging_service/models.py:26:62: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/messaging_service/models.py:26:130: B950 line too long (129 > 100 characters)
+/home/ubuntu/fs_project/src/messaging_service/models.py:49:114: B950 line too long (113 > 100 characters)
+/home/ubuntu/fs_project/src/messaging_service/models.py:54:20: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/messaging_service/models.py:59:70: W291 trailing whitespace
+/home/ubuntu/fs_project/src/messaging_service/models.py:61:142: B950 line too long (141 > 100 characters)
+/home/ubuntu/fs_project/src/messaging_service/models.py:63:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/messaging_service/models.py:68:54: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/messaging_service/models.py:104:133: B950 line too long (132 > 100 characters)
+/home/ubuntu/fs_project/src/messaging_service/models.py:105:1: W391 blank line at end of file
+/home/ubuntu/fs_project/src/post_service/app.py:3:1: F401 'flask_sqlalchemy.SQLAlchemy' imported but unused
+/home/ubuntu/fs_project/src/post_service/app.py:4:34: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/post_service/app.py:6:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/post_service/app.py:14:10: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/post_service/app.py:23:38: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/post_service/app.py:34:29: W291 trailing whitespace
+/home/ubuntu/fs_project/src/post_service/app.py:35:39: W291 trailing whitespace
+/home/ubuntu/fs_project/src/post_service/app.py:36:35: W291 trailing whitespace
+/home/ubuntu/fs_project/src/post_service/app.py:42:9: F841 local variable 'e' is assigned to but never used
+/home/ubuntu/fs_project/src/post_service/app.py:60:114: B950 line too long (113 > 100 characters)
+/home/ubuntu/fs_project/src/post_service/app.py:68:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/post_service/app.py:70:30: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/post_service/app.py:72:9: F841 local variable 'e' is assigned to but never used
+/home/ubuntu/fs_project/src/post_service/app.py:82:114: B950 line too long (113 > 100 characters)
+/home/ubuntu/fs_project/src/post_service/app.py:90:9: F841 local variable 'e' is assigned to but never used
+/home/ubuntu/fs_project/src/post_service/app.py:109:1: E305 expected 2 blank lines after class or function definition, found 1
+/home/ubuntu/fs_project/src/post_service/app.py:112:48: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/post_service/app.py:114:24: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/post_service/app.py:115:35: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/post_service/app.py:116:1: W391 blank line at end of file
+/home/ubuntu/fs_project/src/post_service/models.py:10:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/post_service/models.py:14:52: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/post_service/models.py:14:123: B950 line too long (122 > 100 characters)
+/home/ubuntu/fs_project/src/post_service/models.py:15:76: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/post_service/models.py:15:121: B950 line too long (120 > 100 characters)
+/home/ubuntu/fs_project/src/post_service/models.py:17:51: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/post_service/models.py:18:113: B950 line too long (112 > 100 characters)
+/home/ubuntu/fs_project/src/post_service/models.py:53:118: B950 line too long (117 > 100 characters)
+/home/ubuntu/fs_project/src/post_service/models.py:59:1: W391 blank line at end of file
+/home/ubuntu/fs_project/src/user_service/app.py:3:1: F401 'flask_sqlalchemy.SQLAlchemy' imported but unused
+/home/ubuntu/fs_project/src/user_service/app.py:6:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/user_service/app.py:33:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/user_service/app.py:41:9: F841 local variable 'e' is assigned to but never used
+/home/ubuntu/fs_project/src/user_service/app.py:57:53: W291 trailing whitespace
+/home/ubuntu/fs_project/src/user_service/app.py:67:1: E305 expected 2 blank lines after class or function definition, found 1
+/home/ubuntu/fs_project/src/user_service/app.py:72:43: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/user_service/app.py:74:24: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/user_service/app.py:76:1: W391 blank line at end of file
+/home/ubuntu/fs_project/src/user_service/models.py:6:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/user_service/models.py:38:1: W391 blank line at end of file
+20    B950 line too long (126 > 100 characters)
+2     E111 indentation is not a multiple of 4
+1     E114 indentation is not a multiple of 4 (comment)
+3     E117 over-indented
+43    E261 at least two spaces before inline comment
+13    E302 expected 2 blank lines, found 1
+1     E303 too many blank lines (5)
+5     E305 expected 2 blank lines after class or function definition, found 1
+5     F401 'flask_sqlalchemy.SQLAlchemy' imported but unused
+9     F841 local variable 'e' is assigned to but never used
+6     W291 trailing whitespace
+22    W293 blank line contains whitespace
+10    W391 blank line at end of file
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:3:1: F401 'flask_sqlalchemy.SQLAlchemy' imported but unused
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:7:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:27:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:71:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:93:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:140:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:144:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:146:68: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:147:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:151:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:155:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:169:18: E111 indentation is not a multiple of 4
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:169:18: E117 over-indented
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:178:127: B950 line too long (126 > 100 characters)
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:182:92: W291 trailing whitespace
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:191:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:192:32: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:193:83: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:193:125: B950 line too long (124 > 100 characters)
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:206:142: B950 line too long (141 > 100 characters)
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:210:1: E305 expected 2 blank lines after class or function definition, found 1
+/home/ubuntu/fs_project/src/ai_sandbox_service/app.py:215:1: W391 blank line at end of file
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:7:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:13:76: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:13:123: B950 line too long (122 > 100 characters)
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:14:59: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:16:68: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:21:150: B950 line too long (149 > 100 characters)
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:53:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:59:61: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:65:113: B950 line too long (112 > 100 characters)
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:77:36: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:78:18: E111 indentation is not a multiple of 4
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:78:18: E117 over-indented
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:88:71: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:101:116: B950 line too long (115 > 100 characters)
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:110:1: E303 too many blank lines (5)
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:114:65: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/ai_sandbox_service/models.py:158:1: W391 blank line at end of file
+/home/ubuntu/fs_project/src/group_service/app.py:3:1: F401 'flask_sqlalchemy.SQLAlchemy' imported but unused
+/home/ubuntu/fs_project/src/group_service/app.py:4:53: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/app.py:6:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/group_service/app.py:23:44: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/app.py:28:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/group_service/app.py:37:44: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/app.py:39:9: F841 local variable 'e' is assigned to but never used
+/home/ubuntu/fs_project/src/group_service/app.py:60:38: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/app.py:68:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/group_service/app.py:71:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/group_service/app.py:74:36: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/app.py:76:9: F841 local variable 'e' is assigned to but never used
+/home/ubuntu/fs_project/src/group_service/app.py:84:38: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/app.py:92:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/group_service/app.py:95:14: E114 indentation is not a multiple of 4 (comment)
+/home/ubuntu/fs_project/src/group_service/app.py:95:14: E117 over-indented (comment)
+/home/ubuntu/fs_project/src/group_service/app.py:96:145: B950 line too long (144 > 100 characters)
+/home/ubuntu/fs_project/src/group_service/app.py:99:40: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/app.py:101:9: F841 local variable 'e' is assigned to but never used
+/home/ubuntu/fs_project/src/group_service/app.py:123:52: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/app.py:131:1: E305 expected 2 blank lines after class or function definition, found 1
+/home/ubuntu/fs_project/src/group_service/app.py:135:35: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/app.py:136:1: W391 blank line at end of file
+/home/ubuntu/fs_project/src/group_service/models.py:7:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/group_service/models.py:13:55: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/models.py:16:52: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/models.py:36:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/group_service/models.py:48:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/group_service/models.py:53:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/group_service/models.py:59:54: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/group_service/models.py:98:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/group_service/models.py:105:117: B950 line too long (116 > 100 characters)
+/home/ubuntu/fs_project/src/group_service/models.py:106:1: W391 blank line at end of file
+/home/ubuntu/fs_project/src/messaging_service/app.py:3:1: F401 'flask_sqlalchemy.SQLAlchemy' imported but unused
+/home/ubuntu/fs_project/src/messaging_service/app.py:4:56: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/messaging_service/app.py:6:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/messaging_service/app.py:26:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/messaging_service/app.py:33:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/messaging_service/app.py:41:9: F841 local variable 'e' is assigned to but never used
+/home/ubuntu/fs_project/src/messaging_service/app.py:48:42: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/messaging_service/app.py:57:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/messaging_service/app.py:62:116: B950 line too long (115 > 100 characters)
+/home/ubuntu/fs_project/src/messaging_service/app.py:64:37: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/messaging_service/app.py:66:9: F841 local variable 'e' is assigned to but never used
+/home/ubuntu/fs_project/src/messaging_service/app.py:76:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/messaging_service/app.py:93:1: E305 expected 2 blank lines after class or function definition, found 1
+/home/ubuntu/fs_project/src/messaging_service/app.py:97:35: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/messaging_service/app.py:98:1: W391 blank line at end of file
+/home/ubuntu/fs_project/src/messaging_service/models.py:7:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/messaging_service/models.py:14:57: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/messaging_service/models.py:24:70: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/messaging_service/models.py:26:62: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/messaging_service/models.py:26:130: B950 line too long (129 > 100 characters)
+/home/ubuntu/fs_project/src/messaging_service/models.py:49:114: B950 line too long (113 > 100 characters)
+/home/ubuntu/fs_project/src/messaging_service/models.py:54:20: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/messaging_service/models.py:59:70: W291 trailing whitespace
+/home/ubuntu/fs_project/src/messaging_service/models.py:61:142: B950 line too long (141 > 100 characters)
+/home/ubuntu/fs_project/src/messaging_service/models.py:63:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/messaging_service/models.py:68:54: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/messaging_service/models.py:104:133: B950 line too long (132 > 100 characters)
+/home/ubuntu/fs_project/src/messaging_service/models.py:105:1: W391 blank line at end of file
+/home/ubuntu/fs_project/src/post_service/app.py:3:1: F401 'flask_sqlalchemy.SQLAlchemy' imported but unused
+/home/ubuntu/fs_project/src/post_service/app.py:4:34: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/post_service/app.py:6:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/post_service/app.py:14:10: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/post_service/app.py:23:38: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/post_service/app.py:34:29: W291 trailing whitespace
+/home/ubuntu/fs_project/src/post_service/app.py:35:39: W291 trailing whitespace
+/home/ubuntu/fs_project/src/post_service/app.py:36:35: W291 trailing whitespace
+/home/ubuntu/fs_project/src/post_service/app.py:42:9: F841 local variable 'e' is assigned to but never used
+/home/ubuntu/fs_project/src/post_service/app.py:60:114: B950 line too long (113 > 100 characters)
+/home/ubuntu/fs_project/src/post_service/app.py:68:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/post_service/app.py:70:30: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/post_service/app.py:72:9: F841 local variable 'e' is assigned to but never used
+/home/ubuntu/fs_project/src/post_service/app.py:82:114: B950 line too long (113 > 100 characters)
+/home/ubuntu/fs_project/src/post_service/app.py:90:9: F841 local variable 'e' is assigned to but never used
+/home/ubuntu/fs_project/src/post_service/app.py:109:1: E305 expected 2 blank lines after class or function definition, found 1
+/home/ubuntu/fs_project/src/post_service/app.py:112:48: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/post_service/app.py:114:24: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/post_service/app.py:115:35: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/post_service/app.py:116:1: W391 blank line at end of file
+/home/ubuntu/fs_project/src/post_service/models.py:10:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/post_service/models.py:14:52: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/post_service/models.py:14:123: B950 line too long (122 > 100 characters)
+/home/ubuntu/fs_project/src/post_service/models.py:15:76: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/post_service/models.py:15:121: B950 line too long (120 > 100 characters)
+/home/ubuntu/fs_project/src/post_service/models.py:17:51: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/post_service/models.py:18:113: B950 line too long (112 > 100 characters)
+/home/ubuntu/fs_project/src/post_service/models.py:53:118: B950 line too long (117 > 100 characters)
+/home/ubuntu/fs_project/src/post_service/models.py:59:1: W391 blank line at end of file
+/home/ubuntu/fs_project/src/user_service/app.py:3:1: F401 'flask_sqlalchemy.SQLAlchemy' imported but unused
+/home/ubuntu/fs_project/src/user_service/app.py:6:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/user_service/app.py:33:1: W293 blank line contains whitespace
+/home/ubuntu/fs_project/src/user_service/app.py:41:9: F841 local variable 'e' is assigned to but never used
+/home/ubuntu/fs_project/src/user_service/app.py:57:53: W291 trailing whitespace
+/home/ubuntu/fs_project/src/user_service/app.py:67:1: E305 expected 2 blank lines after class or function definition, found 1
+/home/ubuntu/fs_project/src/user_service/app.py:72:43: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/user_service/app.py:74:24: E261 at least two spaces before inline comment
+/home/ubuntu/fs_project/src/user_service/app.py:76:1: W391 blank line at end of file
+/home/ubuntu/fs_project/src/user_service/models.py:6:1: E302 expected 2 blank lines, found 1
+/home/ubuntu/fs_project/src/user_service/models.py:38:1: W391 blank line at end of file
+20    B950 line too long (126 > 100 characters)
+2     E111 indentation is not a multiple of 4
+1     E114 indentation is not a multiple of 4 (comment)
+3     E117 over-indented
+43    E261 at least two spaces before inline comment
+13    E302 expected 2 blank lines, found 1
+1     E303 too many blank lines (5)
+5     E305 expected 2 blank lines after class or function definition, found 1
+5     F401 'flask_sqlalchemy.SQLAlchemy' imported but unused
+9     F841 local variable 'e' is assigned to but never used
+6     W291 trailing whitespace
+22    W293 blank line contains whitespace
+10    W391 blank line at end of file

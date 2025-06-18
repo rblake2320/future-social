@@ -1,0 +1,281 @@
+[
+  {
+    "service": "user_service",
+    "name": "UserModel",
+    "fields": [
+      {
+        "name": "id",
+        "type": "Column"
+      },
+      {
+        "name": "username",
+        "type": "Column"
+      },
+      {
+        "name": "email",
+        "type": "Column"
+      },
+      {
+        "name": "password_hash",
+        "type": "Column"
+      }
+    ],
+    "file": "/home/ubuntu/fs_project/src/user_service/models.py"
+  },
+  {
+    "service": "post_service",
+    "name": "PostModel",
+    "fields": [
+      {
+        "name": "id",
+        "type": "Column"
+      },
+      {
+        "name": "user_id",
+        "type": "Column"
+      },
+      {
+        "name": "content_type",
+        "type": "Column"
+      },
+      {
+        "name": "text_content",
+        "type": "Column"
+      },
+      {
+        "name": "media_urls",
+        "type": "Column"
+      },
+      {
+        "name": "created_at",
+        "type": "Column"
+      },
+      {
+        "name": "updated_at",
+        "type": "Column"
+      }
+    ],
+    "file": "/home/ubuntu/fs_project/src/post_service/models.py"
+  },
+  {
+    "service": "messaging_service",
+    "name": "ConversationModel",
+    "fields": [
+      {
+        "name": "id",
+        "type": "Column"
+      },
+      {
+        "name": "participant_ids",
+        "type": "Column"
+      },
+      {
+        "name": "created_at",
+        "type": "Column"
+      },
+      {
+        "name": "last_message_at",
+        "type": "Column"
+      }
+    ],
+    "file": "/home/ubuntu/fs_project/src/messaging_service/models.py"
+  },
+  {
+    "service": "messaging_service",
+    "name": "MessageModel",
+    "fields": [
+      {
+        "name": "id",
+        "type": "Column"
+      },
+      {
+        "name": "conversation_id",
+        "type": "Column"
+      },
+      {
+        "name": "sender_id",
+        "type": "Column"
+      },
+      {
+        "name": "text_content",
+        "type": "Column"
+      },
+      {
+        "name": "created_at",
+        "type": "Column"
+      },
+      {
+        "name": "conversation",
+        "type": "relationship"
+      }
+    ],
+    "file": "/home/ubuntu/fs_project/src/messaging_service/models.py"
+  },
+  {
+    "service": "group_service",
+    "name": "GroupModel",
+    "fields": [
+      {
+        "name": "id",
+        "type": "Column"
+      },
+      {
+        "name": "name",
+        "type": "Column"
+      },
+      {
+        "name": "description",
+        "type": "Column"
+      },
+      {
+        "name": "creator_id",
+        "type": "Column"
+      },
+      {
+        "name": "created_at",
+        "type": "Column"
+      },
+      {
+        "name": "member_count",
+        "type": "Column"
+      }
+    ],
+    "file": "/home/ubuntu/fs_project/src/group_service/models.py"
+  },
+  {
+    "service": "group_service",
+    "name": "GroupMemberModel",
+    "fields": [
+      {
+        "name": "id",
+        "type": "Column"
+      },
+      {
+        "name": "group_id",
+        "type": "Column"
+      },
+      {
+        "name": "user_id",
+        "type": "Column"
+      },
+      {
+        "name": "role",
+        "type": "Column"
+      },
+      {
+        "name": "joined_at",
+        "type": "Column"
+      },
+      {
+        "name": "group",
+        "type": "relationship"
+      },
+      {
+        "name": "__table_args__",
+        "type": null
+      }
+    ],
+    "file": "/home/ubuntu/fs_project/src/group_service/models.py"
+  },
+  {
+    "service": "ai_sandbox_service",
+    "name": "LearningModuleModel",
+    "fields": [
+      {
+        "name": "id",
+        "type": "Column"
+      },
+      {
+        "name": "title",
+        "type": "Column"
+      },
+      {
+        "name": "description",
+        "type": "Column"
+      },
+      {
+        "name": "content_type",
+        "type": "Column"
+      },
+      {
+        "name": "content_url",
+        "type": "Column"
+      },
+      {
+        "name": "estimated_duration_minutes",
+        "type": "Column"
+      },
+      {
+        "name": "difficulty_level",
+        "type": "Column"
+      },
+      {
+        "name": "created_at",
+        "type": "Column"
+      }
+    ],
+    "file": "/home/ubuntu/fs_project/src/ai_sandbox_service/models.py"
+  },
+  {
+    "service": "ai_sandbox_service",
+    "name": "UserProgressModel",
+    "fields": [
+      {
+        "name": "id",
+        "type": "Column"
+      },
+      {
+        "name": "user_id",
+        "type": "Column"
+      },
+      {
+        "name": "module_id",
+        "type": "Column"
+      },
+      {
+        "name": "status",
+        "type": "Column"
+      },
+      {
+        "name": "started_at",
+        "type": "Column"
+      },
+      {
+        "name": "completed_at",
+        "type": "Column"
+      },
+      {
+        "name": "module",
+        "type": "relationship"
+      },
+      {
+        "name": "__table_args__",
+        "type": null
+      }
+    ],
+    "file": "/home/ubuntu/fs_project/src/ai_sandbox_service/models.py"
+  },
+  {
+    "service": "ai_sandbox_service",
+    "name": "UserAIPreferenceModel",
+    "fields": [
+      {
+        "name": "id",
+        "type": "Column"
+      },
+      {
+        "name": "user_id",
+        "type": "Column"
+      },
+      {
+        "name": "inferred_interests",
+        "type": "Column"
+      },
+      {
+        "name": "last_updated",
+        "type": "Column"
+      }
+    ],
+    "file": "/home/ubuntu/fs_project/src/ai_sandbox_service/models.py"
+  }
+]

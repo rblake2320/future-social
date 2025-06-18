@@ -1,0 +1,29 @@
+[
+  {
+    "test_name": "Brute Force Protection",
+    "description": "Test if the system has protection against brute force attacks",
+    "vulnerabilities": [
+      {
+        "severity": "High",
+        "description": "No brute force protection detected after multiple failed login attempts",
+        "recommendation": "Implement account lockout or rate limiting after multiple failed login attempts"
+      }
+    ]
+  },
+  {
+    "test_name": "Password Policy",
+    "description": "Test if the system enforces a strong password policy",
+    "vulnerabilities": [
+      {
+        "severity": "Medium",
+        "description": "Weak password '123456' was accepted during registration",
+        "recommendation": "Implement a strong password policy requiring minimum length, complexity, and common password checks"
+      }
+    ]
+  },
+  {
+    "test_name": "Session Management",
+    "description": "Test if the system has secure session management",
+    "vulnerabilities": []
+  }
+]

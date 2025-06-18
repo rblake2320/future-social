@@ -1,0 +1,390 @@
+************* Module models
+src/user_service/models.py:38:0: C0305: Trailing newlines (trailing-newlines)
+src/user_service/models.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+src/user_service/models.py:6:0: C0115: Missing class docstring (missing-class-docstring)
+src/user_service/models.py:20:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/user_service/models.py:24:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/user_service/models.py:24:30: W0622: Redefining built-in 'hash' (redefined-builtin)
+src/user_service/models.py:27:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/user_service/models.py:32:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/user_service/models.py:36:4: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module app
+src/user_service/app.py:33:0: C0303: Trailing whitespace (trailing-whitespace)
+src/user_service/app.py:57:52: C0303: Trailing whitespace (trailing-whitespace)
+src/user_service/app.py:76:0: C0305: Trailing newlines (trailing-newlines)
+src/user_service/app.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+src/user_service/app.py:4:0: E0402: Attempted relative import beyond top-level package (relative-beyond-top-level)
+src/user_service/app.py:6:0: C0116: Missing function or method docstring (missing-function-docstring)
+src/user_service/app.py:7:4: W0621: Redefining name 'app' from outer scope (line 72) (redefined-outer-name)
+src/user_service/app.py:41:15: W0718: Catching too general exception Exception (broad-exception-caught)
+src/user_service/app.py:41:8: W0612: Unused variable 'e' (unused-variable)
+src/user_service/app.py:59:8: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+src/user_service/app.py:3:0: W0611: Unused SQLAlchemy imported from flask_sqlalchemy (unused-import)
+src/ai_sandbox_service/app.py:27:0: C0303: Trailing whitespace (trailing-whitespace)
+src/ai_sandbox_service/app.py:62:0: C0301: Line too long (110/100) (line-too-long)
+src/ai_sandbox_service/app.py:71:0: C0303: Trailing whitespace (trailing-whitespace)
+src/ai_sandbox_service/app.py:93:0: C0303: Trailing whitespace (trailing-whitespace)
+src/ai_sandbox_service/app.py:140:0: C0303: Trailing whitespace (trailing-whitespace)
+src/ai_sandbox_service/app.py:144:0: C0303: Trailing whitespace (trailing-whitespace)
+src/ai_sandbox_service/app.py:146:0: C0301: Line too long (103/100) (line-too-long)
+src/ai_sandbox_service/app.py:147:0: C0303: Trailing whitespace (trailing-whitespace)
+src/ai_sandbox_service/app.py:151:0: C0303: Trailing whitespace (trailing-whitespace)
+src/ai_sandbox_service/app.py:155:0: C0303: Trailing whitespace (trailing-whitespace)
+src/ai_sandbox_service/app.py:169:0: W0311: Bad indentation. Found 17 spaces, expected 16 (bad-indentation)
+src/ai_sandbox_service/app.py:178:0: C0301: Line too long (126/100) (line-too-long)
+src/ai_sandbox_service/app.py:182:91: C0303: Trailing whitespace (trailing-whitespace)
+src/ai_sandbox_service/app.py:191:0: C0303: Trailing whitespace (trailing-whitespace)
+src/ai_sandbox_service/app.py:192:0: C0301: Line too long (105/100) (line-too-long)
+src/ai_sandbox_service/app.py:193:0: C0301: Line too long (124/100) (line-too-long)
+src/ai_sandbox_service/app.py:206:0: C0301: Line too long (141/100) (line-too-long)
+src/ai_sandbox_service/app.py:215:0: C0305: Trailing newlines (trailing-newlines)
+src/ai_sandbox_service/app.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+src/ai_sandbox_service/app.py:5:0: E0402: Attempted relative import beyond top-level package (relative-beyond-top-level)
+src/ai_sandbox_service/app.py:7:0: C0116: Missing function or method docstring (missing-function-docstring)
+src/ai_sandbox_service/app.py:8:4: W0621: Redefining name 'app' from outer scope (line 211) (redefined-outer-name)
+src/ai_sandbox_service/app.py:39:15: W0718: Catching too general exception Exception (broad-exception-caught)
+src/ai_sandbox_service/app.py:40:12: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+src/ai_sandbox_service/app.py:88:23: W0718: Catching too general exception Exception (broad-exception-caught)
+src/ai_sandbox_service/app.py:89:20: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+src/ai_sandbox_service/app.py:97:15: W0718: Catching too general exception Exception (broad-exception-caught)
+src/ai_sandbox_service/app.py:98:12: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+src/ai_sandbox_service/app.py:164:19: W0718: Catching too general exception Exception (broad-exception-caught)
+src/ai_sandbox_service/app.py:165:16: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+src/ai_sandbox_service/app.py:7:0: R0915: Too many statements (103/50) (too-many-statements)
+src/ai_sandbox_service/app.py:4:0: C0411: standard import "datetime.datetime" should be placed before third party imports "flask.Flask", "flask_sqlalchemy.SQLAlchemy" (wrong-import-order)
+src/ai_sandbox_service/app.py:3:0: W0611: Unused SQLAlchemy imported from flask_sqlalchemy (unused-import)
+src/ai_sandbox_service/models.py:13:0: C0301: Line too long (122/100) (line-too-long)
+src/ai_sandbox_service/models.py:14:0: C0301: Line too long (104/100) (line-too-long)
+src/ai_sandbox_service/models.py:16:0: C0301: Line too long (108/100) (line-too-long)
+src/ai_sandbox_service/models.py:17:0: C0301: Line too long (108/100) (line-too-long)
+src/ai_sandbox_service/models.py:21:0: C0301: Line too long (149/100) (line-too-long)
+src/ai_sandbox_service/models.py:59:0: C0301: Line too long (104/100) (line-too-long)
+src/ai_sandbox_service/models.py:65:0: C0301: Line too long (112/100) (line-too-long)
+src/ai_sandbox_service/models.py:78:0: W0311: Bad indentation. Found 17 spaces, expected 16 (bad-indentation)
+src/ai_sandbox_service/models.py:88:0: C0301: Line too long (109/100) (line-too-long)
+src/ai_sandbox_service/models.py:101:0: C0301: Line too long (115/100) (line-too-long)
+src/ai_sandbox_service/models.py:104:0: C0301: Line too long (102/100) (line-too-long)
+src/ai_sandbox_service/models.py:114:0: C0301: Line too long (103/100) (line-too-long)
+src/ai_sandbox_service/models.py:115:0: C0301: Line too long (104/100) (line-too-long)
+src/ai_sandbox_service/models.py:118:0: C0301: Line too long (105/100) (line-too-long)
+src/ai_sandbox_service/models.py:158:0: C0305: Trailing newlines (trailing-newlines)
+src/ai_sandbox_service/models.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+src/ai_sandbox_service/models.py:7:0: C0115: Missing class docstring (missing-class-docstring)
+src/ai_sandbox_service/models.py:21:4: R0913: Too many arguments (7/5) (too-many-arguments)
+src/ai_sandbox_service/models.py:21:4: R0917: Too many positional arguments (7/5) (too-many-positional-arguments)
+src/ai_sandbox_service/models.py:29:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/ai_sandbox_service/models.py:41:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/ai_sandbox_service/models.py:46:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/ai_sandbox_service/models.py:50:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/ai_sandbox_service/models.py:53:0: C0115: Missing class docstring (missing-class-docstring)
+src/ai_sandbox_service/models.py:80:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/ai_sandbox_service/models.py:91:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/ai_sandbox_service/models.py:96:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/ai_sandbox_service/models.py:100:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/ai_sandbox_service/models.py:110:0: C0115: Missing class docstring (missing-class-docstring)
+src/ai_sandbox_service/models.py:126:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/ai_sandbox_service/models.py:143:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/ai_sandbox_service/models.py:148:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/ai_sandbox_service/models.py:152:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/ai_sandbox_service/models.py:2:0: C0411: standard import "datetime.datetime" should be placed before third party import "flask_sqlalchemy.SQLAlchemy" (wrong-import-order)
+src/post_service/models.py:6:0: C0301: Line too long (101/100) (line-too-long)
+src/post_service/models.py:7:0: C0301: Line too long (103/100) (line-too-long)
+src/post_service/models.py:14:0: C0301: Line too long (122/100) (line-too-long)
+src/post_service/models.py:15:0: C0301: Line too long (120/100) (line-too-long)
+src/post_service/models.py:18:0: C0301: Line too long (112/100) (line-too-long)
+src/post_service/models.py:53:0: C0301: Line too long (117/100) (line-too-long)
+src/post_service/models.py:59:0: C0305: Trailing newlines (trailing-newlines)
+src/post_service/models.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+src/post_service/models.py:10:0: C0115: Missing class docstring (missing-class-docstring)
+src/post_service/models.py:28:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/post_service/models.py:39:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/post_service/models.py:43:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/post_service/models.py:48:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/post_service/models.py:52:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/post_service/models.py:56:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/post_service/models.py:2:0: C0411: standard import "datetime.datetime" should be placed before third party import "flask_sqlalchemy.SQLAlchemy" (wrong-import-order)
+src/post_service/app.py:34:28: C0303: Trailing whitespace (trailing-whitespace)
+src/post_service/app.py:35:38: C0303: Trailing whitespace (trailing-whitespace)
+src/post_service/app.py:36:34: C0303: Trailing whitespace (trailing-whitespace)
+src/post_service/app.py:60:0: C0301: Line too long (113/100) (line-too-long)
+src/post_service/app.py:68:0: C0303: Trailing whitespace (trailing-whitespace)
+src/post_service/app.py:82:0: C0301: Line too long (113/100) (line-too-long)
+src/post_service/app.py:96:0: C0301: Line too long (101/100) (line-too-long)
+src/post_service/app.py:116:0: C0305: Trailing newlines (trailing-newlines)
+src/post_service/app.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+src/post_service/app.py:4:0: E0402: Attempted relative import beyond top-level package (relative-beyond-top-level)
+src/post_service/app.py:6:0: C0116: Missing function or method docstring (missing-function-docstring)
+src/post_service/app.py:7:4: W0621: Redefining name 'app' from outer scope (line 112) (redefined-outer-name)
+src/post_service/app.py:42:15: W0718: Catching too general exception Exception (broad-exception-caught)
+src/post_service/app.py:42:8: W0612: Unused variable 'e' (unused-variable)
+src/post_service/app.py:72:15: W0718: Catching too general exception Exception (broad-exception-caught)
+src/post_service/app.py:72:8: W0612: Unused variable 'e' (unused-variable)
+src/post_service/app.py:90:15: W0718: Catching too general exception Exception (broad-exception-caught)
+src/post_service/app.py:90:8: W0612: Unused variable 'e' (unused-variable)
+src/post_service/app.py:3:0: W0611: Unused SQLAlchemy imported from flask_sqlalchemy (unused-import)
+src/messaging_service/models.py:26:0: C0301: Line too long (129/100) (line-too-long)
+src/messaging_service/models.py:49:0: C0301: Line too long (113/100) (line-too-long)
+src/messaging_service/models.py:50:0: C0301: Line too long (103/100) (line-too-long)
+src/messaging_service/models.py:59:69: C0303: Trailing whitespace (trailing-whitespace)
+src/messaging_service/models.py:61:0: C0301: Line too long (141/100) (line-too-long)
+src/messaging_service/models.py:72:0: C0301: Line too long (101/100) (line-too-long)
+src/messaging_service/models.py:74:0: C0301: Line too long (103/100) (line-too-long)
+src/messaging_service/models.py:104:0: C0301: Line too long (132/100) (line-too-long)
+src/messaging_service/models.py:105:0: C0305: Trailing newlines (trailing-newlines)
+src/messaging_service/models.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+src/messaging_service/models.py:7:0: C0115: Missing class docstring (missing-class-docstring)
+src/messaging_service/models.py:28:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/messaging_service/models.py:36:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/messaging_service/models.py:41:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/messaging_service/models.py:45:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/messaging_service/models.py:57:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/messaging_service/models.py:63:0: C0115: Missing class docstring (missing-class-docstring)
+src/messaging_service/models.py:81:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/messaging_service/models.py:90:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/messaging_service/models.py:99:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/messaging_service/models.py:103:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/messaging_service/models.py:2:0: C0411: standard import "datetime.datetime" should be placed before third party import "flask_sqlalchemy.SQLAlchemy" (wrong-import-order)
+src/messaging_service/app.py:4:0: C0301: Line too long (101/100) (line-too-long)
+src/messaging_service/app.py:26:0: C0303: Trailing whitespace (trailing-whitespace)
+src/messaging_service/app.py:33:0: C0303: Trailing whitespace (trailing-whitespace)
+src/messaging_service/app.py:57:0: C0303: Trailing whitespace (trailing-whitespace)
+src/messaging_service/app.py:62:0: C0301: Line too long (115/100) (line-too-long)
+src/messaging_service/app.py:76:0: C0303: Trailing whitespace (trailing-whitespace)
+src/messaging_service/app.py:77:0: C0301: Line too long (104/100) (line-too-long)
+src/messaging_service/app.py:98:0: C0305: Trailing newlines (trailing-newlines)
+src/messaging_service/app.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+src/messaging_service/app.py:4:0: E0402: Attempted relative import beyond top-level package (relative-beyond-top-level)
+src/messaging_service/app.py:6:0: C0116: Missing function or method docstring (missing-function-docstring)
+src/messaging_service/app.py:7:4: W0621: Redefining name 'app' from outer scope (line 94) (redefined-outer-name)
+src/messaging_service/app.py:41:15: W0718: Catching too general exception Exception (broad-exception-caught)
+src/messaging_service/app.py:41:8: W0612: Unused variable 'e' (unused-variable)
+src/messaging_service/app.py:66:15: W0718: Catching too general exception Exception (broad-exception-caught)
+src/messaging_service/app.py:66:8: W0612: Unused variable 'e' (unused-variable)
+src/messaging_service/app.py:3:0: W0611: Unused SQLAlchemy imported from flask_sqlalchemy (unused-import)
+src/group_service/models.py:36:0: C0303: Trailing whitespace (trailing-whitespace)
+src/group_service/models.py:48:0: C0303: Trailing whitespace (trailing-whitespace)
+src/group_service/models.py:98:0: C0303: Trailing whitespace (trailing-whitespace)
+src/group_service/models.py:105:0: C0301: Line too long (116/100) (line-too-long)
+src/group_service/models.py:106:0: C0305: Trailing newlines (trailing-newlines)
+src/group_service/models.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+src/group_service/models.py:7:0: C0115: Missing class docstring (missing-class-docstring)
+src/group_service/models.py:23:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/group_service/models.py:33:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/group_service/models.py:37:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/group_service/models.py:42:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/group_service/models.py:46:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/group_service/models.py:50:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/group_service/models.py:53:0: C0115: Missing class docstring (missing-class-docstring)
+src/group_service/models.py:72:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/group_service/models.py:81:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/group_service/models.py:88:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/group_service/models.py:96:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/group_service/models.py:100:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/group_service/models.py:104:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/group_service/models.py:2:0: C0411: standard import "datetime.datetime" should be placed before third party import "flask_sqlalchemy.SQLAlchemy" (wrong-import-order)
+src/group_service/app.py:28:0: C0303: Trailing whitespace (trailing-whitespace)
+src/group_service/app.py:36:0: C0301: Line too long (106/100) (line-too-long)
+src/group_service/app.py:68:0: C0303: Trailing whitespace (trailing-whitespace)
+src/group_service/app.py:71:0: C0303: Trailing whitespace (trailing-whitespace)
+src/group_service/app.py:92:0: C0303: Trailing whitespace (trailing-whitespace)
+src/group_service/app.py:96:0: C0301: Line too long (144/100) (line-too-long)
+src/group_service/app.py:127:0: C0301: Line too long (101/100) (line-too-long)
+src/group_service/app.py:136:0: C0305: Trailing newlines (trailing-newlines)
+src/group_service/app.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+src/group_service/app.py:4:0: E0402: Attempted relative import beyond top-level package (relative-beyond-top-level)
+src/group_service/app.py:6:0: C0116: Missing function or method docstring (missing-function-docstring)
+src/group_service/app.py:7:4: W0621: Redefining name 'app' from outer scope (line 132) (redefined-outer-name)
+src/group_service/app.py:39:15: W0718: Catching too general exception Exception (broad-exception-caught)
+src/group_service/app.py:39:8: W0612: Unused variable 'e' (unused-variable)
+src/group_service/app.py:76:15: W0718: Catching too general exception Exception (broad-exception-caught)
+src/group_service/app.py:76:8: W0612: Unused variable 'e' (unused-variable)
+src/group_service/app.py:101:15: W0718: Catching too general exception Exception (broad-exception-caught)
+src/group_service/app.py:101:8: W0612: Unused variable 'e' (unused-variable)
+src/group_service/app.py:6:0: R0915: Too many statements (54/50) (too-many-statements)
+src/group_service/app.py:3:0: W0611: Unused SQLAlchemy imported from flask_sqlalchemy (unused-import)
+src/group_service/app.py:1:0: R0801: Similar lines in 2 files
+==app:[6:21]
+==app:[6:22]
+    app = Flask(__name__)
+
+    if database_uri:
+        app.config["SQLALCHEMY_DATABASE_URI"] = database_uri
+    else:
+        app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get(
+            "DATABASE_URL", "postgresql://user:password@localhost:5432/fs_db"
+        )
+    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+    db.init_app(app)
+
+    @app.route("/conversations", methods=["POST"])
+    def create_or_get_conversation():
+        data = request.get_json() (duplicate-code)
+src/group_service/app.py:1:0: R0801: Similar lines in 2 files
+==app:[6:23]
+==app:[7:23]
+    app = Flask(__name__)
+
+    if database_uri:
+        app.config["SQLALCHEMY_DATABASE_URI"] = database_uri
+    else:
+        app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get(
+            "DATABASE_URL", "postgresql://user:password@localhost:5432/fs_db"
+        )
+    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+    db.init_app(app)
+
+    # --- Learning Module Endpoints (Admin/Content Management) ---
+    @app.route("/ai_sandbox/modules", methods=["POST"])
+    def create_learning_module():
+        data = request.get_json() (duplicate-code)
+
+
+Report
+======
+665 statements analysed.
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |10     |10         |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |9      |9          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|method   |54     |54         |=          |18.52       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|function |34     |34         |=          |85.29       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+External dependencies
+---------------------
+::
+
+    flask (app)
+    flask_sqlalchemy (app,models)
+    passlib 
+      \-hash (models)
+
+
+
+1127 lines have been analyzed
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |772    |68.50 |772      |=          |
++----------+-------+------+---------+-----------+
+|docstring |57     |5.06  |57       |=          |
++----------+-------+------+---------+-----------+
+|comment   |93     |8.25  |93       |=          |
++----------+-------+------+---------+-----------+
+|empty     |205    |18.19 |205      |=          |
++----------+-------+------+---------+-----------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |0          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |153    |153      |153        |
++-----------+-------+---------+-----------+
+|refactor   |7      |7        |7          |
++-----------+-------+---------+-----------+
+|warning    |39     |39       |39         |
++-----------+-------+---------+-----------+
+|error      |5      |5        |5          |
++-----------+-------+---------+-----------+
+
+
+
+% errors / warnings by module
+-----------------------------
+
++-------+------+--------+---------+-----------+
+|module |error |warning |refactor |convention |
++=======+======+========+=========+===========+
+|app    |20.00 |20.51   |42.86    |6.54       |
++-------+------+--------+---------+-----------+
+|models |0.00  |0.00    |0.00     |13.73      |
++-------+------+--------+---------+-----------+
+
+
+
+Messages
+--------
+
++------------------------------+------------+
+|message id                    |occurrences |
++==============================+============+
+|missing-function-docstring    |49          |
++------------------------------+------------+
+|line-too-long                 |42          |
++------------------------------+------------+
+|trailing-whitespace           |28          |
++------------------------------+------------+
+|broad-exception-caught        |13          |
++------------------------------+------------+
+|trailing-newlines             |10          |
++------------------------------+------------+
+|missing-module-docstring      |10          |
++------------------------------+------------+
+|unused-variable               |9           |
++------------------------------+------------+
+|missing-class-docstring       |9           |
++------------------------------+------------+
+|wrong-import-order            |5           |
++------------------------------+------------+
+|unused-import                 |5           |
++------------------------------+------------+
+|relative-beyond-top-level     |5           |
++------------------------------+------------+
+|redefined-outer-name          |5           |
++------------------------------+------------+
+|logging-fstring-interpolation |4           |
++------------------------------+------------+
+|too-many-statements           |2           |
++------------------------------+------------+
+|duplicate-code                |2           |
++------------------------------+------------+
+|bad-indentation               |2           |
++------------------------------+------------+
+|too-many-positional-arguments |1           |
++------------------------------+------------+
+|too-many-arguments            |1           |
++------------------------------+------------+
+|redefined-builtin             |1           |
++------------------------------+------------+
+|no-else-return                |1           |
++------------------------------+------------+
+
+
+
+
+------------------------------------------------------------------
+Your code has been rated at 6.63/10 (previous run: 6.63/10, +0.00)
+

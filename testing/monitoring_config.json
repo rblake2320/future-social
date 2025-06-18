@@ -1,0 +1,27 @@
+{
+  "enabled": true,
+  "log_level": "INFO",
+  "metrics_interval_seconds": 5,
+  "output_dir": "/home/ubuntu/fs_project/testing/results/monitoring",
+  "monitors": [
+    {
+      "type": "cpu",
+      "enabled": true,
+      "alert_threshold": 90
+    },
+    {
+      "type": "memory",
+      "enabled": true,
+      "alert_threshold": 90
+    },
+    {
+      "type": "disk",
+      "enabled": true,
+      "alert_threshold": 90
+    },
+    {
+      "type": "network",
+      "enabled": true
+    }
+  ]
+}

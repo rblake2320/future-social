@@ -1,0 +1,9 @@
+@startuml
+!theme plain
+title User Authentication Journey
+
+start
+:Register new user;
+:Login with credentials;
+stop
+@enduml

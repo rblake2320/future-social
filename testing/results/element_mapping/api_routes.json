@@ -1,0 +1,212 @@
+[
+  {
+    "service": "user_service",
+    "path": "/register",
+    "method": "POST",
+    "function": "register",
+    "file": "/home/ubuntu/fs_project/src/user_service/app.py"
+  },
+  {
+    "service": "user_service",
+    "path": "/login",
+    "method": "POST",
+    "function": "login",
+    "file": "/home/ubuntu/fs_project/src/user_service/app.py"
+  },
+  {
+    "service": "post_service",
+    "path": "/posts",
+    "method": "POST",
+    "function": "create_post",
+    "file": "/home/ubuntu/fs_project/src/post_service/app.py"
+  },
+  {
+    "service": "post_service",
+    "path": "/posts/<int:post_id>",
+    "method": "GET",
+    "function": "get_post",
+    "file": "/home/ubuntu/fs_project/src/post_service/app.py"
+  },
+  {
+    "service": "post_service",
+    "path": "/posts/<int:post_id>",
+    "method": "PUT",
+    "function": "update_post",
+    "file": "/home/ubuntu/fs_project/src/post_service/app.py"
+  },
+  {
+    "service": "post_service",
+    "path": "/posts/<int:post_id>",
+    "method": "DELETE",
+    "function": "delete_post",
+    "file": "/home/ubuntu/fs_project/src/post_service/app.py"
+  },
+  {
+    "service": "post_service",
+    "path": "/users/<int:user_id>/posts",
+    "method": "GET",
+    "function": "get_posts_by_user",
+    "file": "/home/ubuntu/fs_project/src/post_service/app.py"
+  },
+  {
+    "service": "post_service",
+    "path": "/feed",
+    "method": "GET",
+    "function": "get_feed",
+    "file": "/home/ubuntu/fs_project/src/post_service/app.py"
+  },
+  {
+    "service": "messaging_service",
+    "path": "/conversations",
+    "method": "POST",
+    "function": "create_or_get_conversation",
+    "file": "/home/ubuntu/fs_project/src/messaging_service/app.py"
+  },
+  {
+    "service": "messaging_service",
+    "path": "/conversations/<int:conversation_id>/messages",
+    "method": "POST",
+    "function": "send_message",
+    "file": "/home/ubuntu/fs_project/src/messaging_service/app.py"
+  },
+  {
+    "service": "messaging_service",
+    "path": "/conversations/<int:conversation_id>/messages",
+    "method": "GET",
+    "function": "get_messages",
+    "file": "/home/ubuntu/fs_project/src/messaging_service/app.py"
+  },
+  {
+    "service": "messaging_service",
+    "path": "/users/<int:user_id>/conversations",
+    "method": "GET",
+    "function": "get_user_conversations_list",
+    "file": "/home/ubuntu/fs_project/src/messaging_service/app.py"
+  },
+  {
+    "service": "group_service",
+    "path": "/groups",
+    "method": "POST",
+    "function": "create_group",
+    "file": "/home/ubuntu/fs_project/src/group_service/app.py"
+  },
+  {
+    "service": "group_service",
+    "path": "/groups/<int:group_id>",
+    "method": "GET",
+    "function": "get_group",
+    "file": "/home/ubuntu/fs_project/src/group_service/app.py"
+  },
+  {
+    "service": "group_service",
+    "path": "/groups",
+    "method": "GET",
+    "function": "get_all_groups",
+    "file": "/home/ubuntu/fs_project/src/group_service/app.py"
+  },
+  {
+    "service": "group_service",
+    "path": "/groups/<int:group_id>/join",
+    "method": "POST",
+    "function": "join_group",
+    "file": "/home/ubuntu/fs_project/src/group_service/app.py"
+  },
+  {
+    "service": "group_service",
+    "path": "/groups/<int:group_id>/leave",
+    "method": "POST",
+    "function": "leave_group",
+    "file": "/home/ubuntu/fs_project/src/group_service/app.py"
+  },
+  {
+    "service": "group_service",
+    "path": "/groups/<int:group_id>/members",
+    "method": "GET",
+    "function": "get_group_members_list",
+    "file": "/home/ubuntu/fs_project/src/group_service/app.py"
+  },
+  {
+    "service": "group_service",
+    "path": "/users/<int:user_id>/groups",
+    "method": "GET",
+    "function": "get_user_groups_list",
+    "file": "/home/ubuntu/fs_project/src/group_service/app.py"
+  },
+  {
+    "service": "ai_sandbox_service",
+    "path": "/ai_sandbox/modules",
+    "method": "POST",
+    "function": "create_learning_module",
+    "file": "/home/ubuntu/fs_project/src/ai_sandbox_service/app.py"
+  },
+  {
+    "service": "ai_sandbox_service",
+    "path": "/ai_sandbox/modules/<int:module_id>",
+    "method": "GET",
+    "function": "get_learning_module",
+    "file": "/home/ubuntu/fs_project/src/ai_sandbox_service/app.py"
+  },
+  {
+    "service": "ai_sandbox_service",
+    "path": "/ai_sandbox/modules",
+    "method": "GET",
+    "function": "get_all_learning_modules",
+    "file": "/home/ubuntu/fs_project/src/ai_sandbox_service/app.py"
+  },
+  {
+    "service": "ai_sandbox_service",
+    "path": "/ai_sandbox/users/<int:user_id>/progress/<int:module_id>",
+    "method": "POST",
+    "function": "update_user_progress",
+    "file": "/home/ubuntu/fs_project/src/ai_sandbox_service/app.py"
+  },
+  {
+    "service": "ai_sandbox_service",
+    "path": "/ai_sandbox/users/<int:user_id>/progress/<int:module_id>",
+    "method": "PUT",
+    "function": "update_user_progress",
+    "file": "/home/ubuntu/fs_project/src/ai_sandbox_service/app.py"
+  },
+  {
+    "service": "ai_sandbox_service",
+    "path": "/ai_sandbox/users/<int:user_id>/progress/<int:module_id>",
+    "method": "GET",
+    "function": "get_user_progress_for_module",
+    "file": "/home/ubuntu/fs_project/src/ai_sandbox_service/app.py"
+  },
+  {
+    "service": "ai_sandbox_service",
+    "path": "/ai_sandbox/users/<int:user_id>/progress",
+    "method": "GET",
+    "function": "get_all_user_progress",
+    "file": "/home/ubuntu/fs_project/src/ai_sandbox_service/app.py"
+  },
+  {
+    "service": "ai_sandbox_service",
+    "path": "/ai_sandbox/users/<int:user_id>/preferences",
+    "method": "GET",
+    "function": "get_user_ai_preferences",
+    "file": "/home/ubuntu/fs_project/src/ai_sandbox_service/app.py"
+  },
+  {
+    "service": "ai_sandbox_service",
+    "path": "/ai_sandbox/users/<int:user_id>/preferences",
+    "method": "PUT",
+    "function": "update_user_ai_preferences",
+    "file": "/home/ubuntu/fs_project/src/ai_sandbox_service/app.py"
+  },
+  {
+    "service": "ai_sandbox_service",
+    "path": "/ai_sandbox/users/<int:user_id>/recommendations",
+    "method": "GET",
+    "function": "get_learning_recommendations",
+    "file": "/home/ubuntu/fs_project/src/ai_sandbox_service/app.py"
+  },
+  {
+    "service": "ai_sandbox_service",
+    "path": "/api/ai_sandbox/status",
+    "method": "GET",
+    "function": "sandbox_status",
+    "file": "/home/ubuntu/fs_project/src/ai_sandbox_service/app.py"
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "journey": "User Authentication",
+  "scenario": "Edge Cases - User Authentication",
+  "steps_total": 2,
+  "steps_passed": 2,
+  "success_rate": 1.0,
+  "status": "pass",
+  "step_results": [
+    {
+      "id": "012481cc",
+      "action": "Edge case for Register new user",
+      "method": "POST",
+      "path": "/register",
+      "input": {
+        "username": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "email": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com",
+        "password": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA123!"
+      },
+      "expected_result": "Handled appropriately",
+      "status_code": 200,
+      "response": {
+        "success": true,
+        "message": "Operation completed successfully",
+        "token": "mock_auth_token_c9ab81a2",
+        "user_id": 83
+      },
+      "duration_ms": 59.351205825805664,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:33.188004",
+      "tags": [
+        "critical"
+      ]
+    },
+    {
+      "id": "4c2c4ae8",
+      "action": "Edge case for Login with credentials",
+      "method": "POST",
+      "path": "/login",
+      "input": {
+        "id": 0
+      },
+      "expected_result": "Handled appropriately",
+      "status_code": 200,
+      "response": {
+        "success": true,
+        "message": "Operation completed successfully",
+        "token": "mock_auth_token_403364bb",
+        "user_id": 828
+      },
+      "duration_ms": 112.42508888244629,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:33.300788",
+      "tags": [
+        "critical"
+      ]
+    }
+  ],
+  "timestamp": "2025-06-17T20:20:33.300825"
+}

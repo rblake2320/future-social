@@ -1,0 +1,152 @@
+{
+  "timestamp": "2025-06-17T19:58:28.315995",
+  "code_metrics": {
+    "services": {
+      "user_service": {
+        "python_files": 2,
+        "total_lines": 114,
+        "code_lines": 80,
+        "comment_lines": 9,
+        "blank_lines": 25,
+        "functions": 1,
+        "classes": 1,
+        "complexity": 0
+      },
+      "post_service": {
+        "python_files": 2,
+        "total_lines": 175,
+        "code_lines": 122,
+        "comment_lines": 23,
+        "blank_lines": 30,
+        "functions": 1,
+        "classes": 1,
+        "complexity": 0
+      },
+      "messaging_service": {
+        "python_files": 2,
+        "total_lines": 203,
+        "code_lines": 134,
+        "comment_lines": 31,
+        "blank_lines": 38,
+        "functions": 1,
+        "classes": 2,
+        "complexity": 0
+      },
+      "group_service": {
+        "python_files": 2,
+        "total_lines": 242,
+        "code_lines": 180,
+        "comment_lines": 15,
+        "blank_lines": 47,
+        "functions": 1,
+        "classes": 2,
+        "complexity": 0
+      },
+      "ai_sandbox_service": {
+        "python_files": 2,
+        "total_lines": 373,
+        "code_lines": 293,
+        "comment_lines": 15,
+        "blank_lines": 65,
+        "functions": 1,
+        "classes": 3,
+        "complexity": 0
+      }
+    },
+    "tests": {
+      "python_files": 6,
+      "total_lines": 936,
+      "code_lines": 780,
+      "comment_lines": 30,
+      "blank_lines": 126,
+      "functions": 0,
+      "classes": 7,
+      "complexity": 0
+    },
+    "total": {
+      "python_files": 16,
+      "total_lines": 2043,
+      "code_lines": 1589,
+      "comment_lines": 123,
+      "blank_lines": 331,
+      "functions": 5,
+      "classes": 16,
+      "complexity": 0
+    }
+  },
+  "system_metrics": {
+    "timestamp": "2025-06-17T19:58:31.173015",
+    "cpu": {
+      "count_physical": 2,
+      "count_logical": 4,
+      "usage_percent": 11.6,
+      "load_avg": [
+        0.40234375,
+        0.630859375,
+        0.59033203125
+      ]
+    },
+    "memory": {
+      "total": 4133244928,
+      "available": 2768179200,
+      "used": 1103179776,
+      "percent": 33.0
+    },
+    "disk": {
+      "total": 38794416128,
+      "used": 5189685248,
+      "free": 33587953664,
+      "percent": 13.4
+    },
+    "network": {
+      "interfaces": [
+        "lo",
+        "eth0"
+      ],
+      "connections": 33
+    },
+    "platform": {
+      "system": "Linux",
+      "release": "6.1.102",
+      "version": "#1 SMP PREEMPT_DYNAMIC Tue Sep  3 09:03:50 UTC 2024",
+      "machine": "x86_64",
+      "processor": "x86_64"
+    }
+  },
+  "database_metrics": {
+    "timestamp": "2025-06-17T19:58:32.189356",
+    "status": "placeholder",
+    "note": "Actual database metrics would be collected here if DB was configured"
+  },
+  "api_metrics": {
+    "timestamp": "2025-06-17T19:58:32.189500",
+    "status": "placeholder",
+    "endpoints": {
+      "user_service": [
+        "POST /users",
+        "GET /users/{id}",
+        "PUT /users/{id}",
+        "DELETE /users/{id}"
+      ],
+      "post_service": [
+        "POST /posts",
+        "GET /posts/{id}",
+        "PUT /posts/{id}",
+        "DELETE /posts/{id}"
+      ],
+      "messaging_service": [
+        "POST /messages",
+        "GET /messages/{id}"
+      ],
+      "group_service": [
+        "POST /groups",
+        "GET /groups/{id}"
+      ],
+      "ai_sandbox_service": [
+        "GET /modules",
+        "GET /modules/{id}"
+      ]
+    },
+    "note": "Actual API metrics would be collected here after API testing"
+  }
+}

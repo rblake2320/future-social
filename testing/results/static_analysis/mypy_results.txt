@@ -1,0 +1,4 @@
+src/group_service/app.py: error: Duplicate module named "app" (also at "/home/ubuntu/fs_project/src/ai_sandbox_service/app.py")
+src/group_service/app.py: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#mapping-file-paths-to-modules for more info
+src/group_service/app.py: note: Common resolutions include: a) using `--exclude` to avoid checking one of them, b) adding `__init__.py` somewhere, c) using `--explicit-package-bases` or adjusting MYPYPATH
+Found 1 error in 1 file (errors prevented further checking)

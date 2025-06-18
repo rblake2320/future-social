@@ -1,0 +1,107 @@
+[
+  {
+    "endpoint": "POST /users/register",
+    "results": [
+      {
+        "input_type": "empty_payload",
+        "status_code": 200,
+        "error": null,
+        "handled_correctly": true
+      },
+      {
+        "input_type": "null_values",
+        "status_code": 200,
+        "error": null,
+        "handled_correctly": true
+      },
+      {
+        "input_type": "invalid_types",
+        "status_code": 200,
+        "error": null,
+        "handled_correctly": true
+      },
+      {
+        "input_type": "oversized_payload",
+        "status_code": 200,
+        "error": null,
+        "handled_correctly": true
+      },
+      {
+        "input_type": "sql_injection",
+        "status_code": 200,
+        "error": null,
+        "handled_correctly": true
+      }
+    ]
+  },
+  {
+    "endpoint": "POST /posts",
+    "results": [
+      {
+        "input_type": "empty_payload",
+        "status_code": 200,
+        "error": null,
+        "handled_correctly": true
+      },
+      {
+        "input_type": "null_values",
+        "status_code": 200,
+        "error": null,
+        "handled_correctly": true
+      },
+      {
+        "input_type": "invalid_types",
+        "status_code": 200,
+        "error": null,
+        "handled_correctly": true
+      },
+      {
+        "input_type": "oversized_payload",
+        "status_code": 200,
+        "error": null,
+        "handled_correctly": true
+      },
+      {
+        "input_type": "sql_injection",
+        "status_code": 200,
+        "error": null,
+        "handled_correctly": true
+      }
+    ]
+  },
+  {
+    "endpoint": "POST /conversations",
+    "results": [
+      {
+        "input_type": "empty_payload",
+        "status_code": 200,
+        "error": null,
+        "handled_correctly": true
+      },
+      {
+        "input_type": "null_values",
+        "status_code": 200,
+        "error": null,
+        "handled_correctly": true
+      },
+      {
+        "input_type": "invalid_types",
+        "status_code": 200,
+        "error": null,
+        "handled_correctly": true
+      },
+      {
+        "input_type": "oversized_payload",
+        "status_code": 200,
+        "error": null,
+        "handled_correctly": true
+      },
+      {
+        "input_type": "sql_injection",
+        "status_code": 200,
+        "error": null,
+        "handled_correctly": true
+      }
+    ]
+  }
+]

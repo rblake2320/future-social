@@ -1,0 +1,110 @@
+[
+  {
+    "test_name": "SQL Injection",
+    "description": "Test if the application is vulnerable to SQL injection attacks",
+    "vulnerabilities": [
+      {
+        "severity": "Critical",
+        "endpoint": "POST /users/login",
+        "payload": "'; DROP TABLE users; --",
+        "description": "Endpoint is vulnerable to SQL injection via email parameter",
+        "recommendation": "Use parameterized queries or ORM with proper input validation"
+      },
+      {
+        "severity": "Critical",
+        "endpoint": "POST /conversations",
+        "payload": "admin' --",
+        "description": "Endpoint is vulnerable to SQL injection via message parameter",
+        "recommendation": "Use parameterized queries or ORM with proper input validation"
+      },
+      {
+        "severity": "Critical",
+        "endpoint": "GET /users",
+        "payload": "' OR 1=1 --",
+        "description": "Endpoint is vulnerable to SQL injection via search parameter",
+        "recommendation": "Use parameterized queries or ORM with proper input validation"
+      }
+    ]
+  },
+  {
+    "test_name": "Cross-Site Scripting (XSS)",
+    "description": "Test if the application is vulnerable to XSS attacks",
+    "vulnerabilities": [
+      {
+        "severity": "High",
+        "endpoint": "POST /users/login",
+        "payload": "<script>alert('XSS')</script>",
+        "description": "Endpoint is vulnerable to XSS via email parameter",
+        "recommendation": "Implement proper output encoding and Content-Security-Policy headers"
+      },
+      {
+        "severity": "High",
+        "endpoint": "POST /posts",
+        "payload": "<iframe src=\"javascript:alert('XSS')\"></iframe>",
+        "description": "Endpoint is vulnerable to XSS via content parameter",
+        "recommendation": "Implement proper output encoding and Content-Security-Policy headers"
+      },
+      {
+        "severity": "High",
+        "endpoint": "POST /conversations",
+        "payload": "<img src=x onerror=alert('XSS')>",
+        "description": "Endpoint is vulnerable to XSS via message parameter",
+        "recommendation": "Implement proper output encoding and Content-Security-Policy headers"
+      },
+      {
+        "severity": "High",
+        "endpoint": "GET /users",
+        "payload": "<img src=x onerror=alert('XSS')>",
+        "description": "Endpoint is vulnerable to XSS via search parameter",
+        "recommendation": "Implement proper output encoding and Content-Security-Policy headers"
+      }
+    ]
+  },
+  {
+    "test_name": "Command Injection",
+    "description": "Test if the application is vulnerable to command injection attacks",
+    "vulnerabilities": [
+      {
+        "severity": "Critical",
+        "endpoint": "POST /users/login",
+        "payload": "; ls -la",
+        "description": "Endpoint is vulnerable to command injection via email parameter",
+        "recommendation": "Avoid using system commands with user input, or implement strict input validation and sanitization"
+      },
+      {
+        "severity": "Critical",
+        "endpoint": "POST /posts",
+        "payload": "$(cat /etc/passwd)",
+        "description": "Endpoint is vulnerable to command injection via content parameter",
+        "recommendation": "Avoid using system commands with user input, or implement strict input validation and sanitization"
+      },
+      {
+        "severity": "Critical",
+        "endpoint": "GET /users",
+        "payload": "; ls -la",
+        "description": "Endpoint is vulnerable to command injection via search parameter",
+        "recommendation": "Avoid using system commands with user input, or implement strict input validation and sanitization"
+      }
+    ]
+  },
+  {
+    "test_name": "Path Traversal",
+    "description": "Test if the application is vulnerable to path traversal attacks",
+    "vulnerabilities": [
+      {
+        "severity": "High",
+        "endpoint": "GET /images",
+        "payload": "../../../etc/passwd",
+        "description": "Endpoint is vulnerable to path traversal via path parameter",
+        "recommendation": "Validate file paths against a whitelist and use safe APIs for file operations"
+      },
+      {
+        "severity": "High",
+        "endpoint": "GET /download",
+        "payload": "..\\..\\..\\Windows\\system.ini",
+        "description": "Endpoint is vulnerable to path traversal via file parameter",
+        "recommendation": "Validate file paths against a whitelist and use safe APIs for file operations"
+      }
+    ]
+  }
+]

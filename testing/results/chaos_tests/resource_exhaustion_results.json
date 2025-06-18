@@ -1,0 +1,23 @@
+[
+  {
+    "scenario": "memory_exhaustion",
+    "description": "Test behavior when memory is exhausted",
+    "status_code": 503,
+    "error": "Simulated memory_exhaustion",
+    "graceful_handling": true
+  },
+  {
+    "scenario": "cpu_exhaustion",
+    "description": "Test behavior when CPU is exhausted",
+    "status_code": 500,
+    "error": "Simulated cpu_exhaustion",
+    "graceful_handling": false
+  },
+  {
+    "scenario": "disk_space_exhaustion",
+    "description": "Test behavior when disk space is exhausted",
+    "status_code": 503,
+    "error": "Simulated disk_space_exhaustion",
+    "graceful_handling": true
+  }
+]

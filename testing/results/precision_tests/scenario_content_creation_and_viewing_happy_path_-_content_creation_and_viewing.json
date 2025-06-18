@@ -1,0 +1,50 @@
+{
+  "journey": "Content Creation and Viewing",
+  "scenario": "Happy Path - Content Creation and Viewing",
+  "steps_total": 2,
+  "steps_passed": 2,
+  "success_rate": 1.0,
+  "status": "pass",
+  "step_results": [
+    {
+      "id": "450ef489",
+      "action": "Create new post",
+      "method": "POST",
+      "path": "/posts",
+      "input": {
+        "title": "Sample Post Title",
+        "content": "This is a sample post content for testing purposes.",
+        "user_id": 1
+      },
+      "expected_result": "Success",
+      "status_code": 200,
+      "response": {
+        "success": true,
+        "message": "Operation completed successfully",
+        "post_id": 826
+      },
+      "duration_ms": 83.00161361694336,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:33.384693"
+    },
+    {
+      "id": "ec18fd4c",
+      "action": "View personalized feed",
+      "method": "GET",
+      "path": "/feed",
+      "input": {
+        "id": 1
+      },
+      "expected_result": "Success",
+      "status_code": 200,
+      "response": {
+        "success": true,
+        "message": "Operation completed successfully"
+      },
+      "duration_ms": 187.41321563720703,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:33.572435"
+    }
+  ],
+  "timestamp": "2025-06-17T20:20:33.572474"
+}

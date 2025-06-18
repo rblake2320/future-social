@@ -1,0 +1,89 @@
+{
+  "journey": "Group Interaction",
+  "scenario": "Happy Path - Group Interaction",
+  "steps_total": 4,
+  "steps_passed": 4,
+  "success_rate": 1.0,
+  "status": "pass",
+  "step_results": [
+    {
+      "id": "a1294ebf",
+      "action": "View all groups",
+      "method": "GET",
+      "path": "/groups",
+      "input": {
+        "id": 1
+      },
+      "expected_result": "Success",
+      "status_code": 200,
+      "response": {
+        "success": true,
+        "message": "Operation completed successfully"
+      },
+      "duration_ms": 180.65309524536133,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:34.847105"
+    },
+    {
+      "id": "f2d80c1e",
+      "action": "Create new group",
+      "method": "POST",
+      "path": "/groups",
+      "input": {
+        "name": "Test Group",
+        "description": "This is a test group for testing purposes.",
+        "creator_id": 1
+      },
+      "expected_result": "Success",
+      "status_code": 200,
+      "response": {
+        "success": true,
+        "message": "Operation completed successfully"
+      },
+      "duration_ms": 58.940887451171875,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:34.906692"
+    },
+    {
+      "id": "c3bf1cfb",
+      "action": "Join group",
+      "method": "POST",
+      "path": "/groups/<int:group_id>/join",
+      "input": {
+        "name": "Test Group",
+        "description": "This is a test group for testing purposes.",
+        "creator_id": 1
+      },
+      "expected_result": "Success",
+      "status_code": 200,
+      "response": {
+        "success": true,
+        "message": "Operation completed successfully"
+      },
+      "duration_ms": 135.2853775024414,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:35.042377"
+    },
+    {
+      "id": "49a2feec",
+      "action": "Leave group",
+      "method": "POST",
+      "path": "/groups/<int:group_id>/leave",
+      "input": {
+        "name": "Test Group",
+        "description": "This is a test group for testing purposes.",
+        "creator_id": 1
+      },
+      "expected_result": "Success",
+      "status_code": 200,
+      "response": {
+        "success": true,
+        "message": "Operation completed successfully"
+      },
+      "duration_ms": 145.43986320495605,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:35.188159"
+    }
+  ],
+  "timestamp": "2025-06-17T20:20:35.188200"
+}

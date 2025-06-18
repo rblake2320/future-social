@@ -1,0 +1,53 @@
+{
+  "name": "User Relationship State Transitions",
+  "description": "Test transitions between user relationship states",
+  "transition_results": [
+    {
+      "id": "eca07662",
+      "from_state": "strangers",
+      "to_state": "following",
+      "action": "follow",
+      "expected": "success",
+      "status": "pass",
+      "message": "Successfully transitioned from strangers to following",
+      "duration_ms": 145.80535888671875,
+      "timestamp": "2025-06-17T20:20:37.182772"
+    },
+    {
+      "id": "728c86c2",
+      "from_state": "following",
+      "to_state": "strangers",
+      "action": "unfollow",
+      "expected": "success",
+      "status": "fail",
+      "message": "Failed to transition from following to strangers",
+      "duration_ms": 186.4321231842041,
+      "timestamp": "2025-06-17T20:20:37.369557"
+    },
+    {
+      "id": "87cf33af",
+      "from_state": "following",
+      "to_state": "blocked",
+      "action": "block",
+      "expected": "success",
+      "status": "pass",
+      "message": "Successfully transitioned from following to blocked",
+      "duration_ms": 176.835298538208,
+      "timestamp": "2025-06-17T20:20:37.546716"
+    },
+    {
+      "id": "af265e08",
+      "from_state": "blocked",
+      "to_state": "strangers",
+      "action": "unblock",
+      "expected": "success",
+      "status": "pass",
+      "message": "Successfully transitioned from blocked to strangers",
+      "duration_ms": 143.57352256774902,
+      "timestamp": "2025-06-17T20:20:37.690661"
+    }
+  ],
+  "timestamp": "2025-06-17T20:20:37.036852",
+  "success_rate": 0.75,
+  "status": "partial"
+}

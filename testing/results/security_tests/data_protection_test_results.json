@@ -1,0 +1,23 @@
+[
+  {
+    "test_name": "Sensitive Data Exposure",
+    "description": "Test if the application exposes sensitive data",
+    "vulnerabilities": []
+  },
+  {
+    "test_name": "Insecure Data Storage",
+    "description": "Test if the application stores sensitive data insecurely",
+    "vulnerabilities": [
+      {
+        "severity": "High",
+        "description": "Passwords may be stored with weak hashing algorithms (e.g., MD5, SHA1) or without proper salting",
+        "recommendation": "Use strong adaptive hashing algorithms like bcrypt, Argon2, or PBKDF2 with proper salting"
+      }
+    ]
+  },
+  {
+    "test_name": "Insufficient Transport Layer Protection",
+    "description": "Test if the application uses secure transport protocols",
+    "vulnerabilities": []
+  }
+]

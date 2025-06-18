@@ -1,0 +1,22 @@
+@startuml
+!theme plain
+title Direct Messaging Journey
+
+start
+:Start new conversation;
+if (Success?) then (yes)
+  #palegreen:Success;
+else (no)
+  #pink:Handle Error;
+  :Retry or Recover;
+endif
+:Send message;
+if (Success?) then (yes)
+  #palegreen:Success;
+else (no)
+  #pink:Handle Error;
+  :Retry or Recover;
+endif
+:View messages;
+stop
+@enduml

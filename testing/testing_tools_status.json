@@ -1,0 +1,90 @@
+{
+  "timestamp": "2025-06-17T20:07:37.485283",
+  "pytest": {
+    "status": "success",
+    "version": "pytest 8.4.0",
+    "plugins": [
+      "pytest-cov",
+      "pytest-mock",
+      "pytest-flask",
+      "pytest-benchmark",
+      "pytest-xdist",
+      "pytest-html",
+      "pytest-timeout",
+      "pytest-randomly"
+    ],
+    "config_file": "/home/ubuntu/fs_project/pytest.ini"
+  },
+  "flake8": {
+    "status": "success",
+    "version": "7.2.0 (flake8-annotations: 3.1.1, flake8-bandit: 4.1.1, flake8-bugbear:\n24.12.12, flake8-docstrings: 1.7.0, flake8_import_order: 0.19.0, mccabe:\n0.7.0, pycodestyle: 2.13.0, pyflakes: 3.3.2) CPython 3.11.0rc1 on Linux",
+    "plugins": [
+      "flake8-docstrings",
+      "flake8-import-order",
+      "flake8-bugbear",
+      "flake8-bandit",
+      "flake8-annotations"
+    ],
+    "config_file": "/home/ubuntu/fs_project/.flake8"
+  },
+  "security_tools": {
+    "status": "success",
+    "tools": [
+      "bandit",
+      "safety",
+      "python-owasp-zap-v2.4",
+      "pyjwt",
+      "cryptography"
+    ],
+    "bandit_version": "__main__.py 1.8.5\n  python version = 3.11.0rc1 (main, Aug 12 2022, 10:02:14) [GCC 11.2.0]",
+    "config_file": "/home/ubuntu/fs_project/testing/configs/bandit.conf"
+  },
+  "performance_tools": {
+    "status": "success",
+    "tools": [
+      "locust",
+      "pyinstrument",
+      "memory_profiler",
+      "psutil",
+      "requests"
+    ],
+    "locust_version": "locust 2.37.10 from /home/ubuntu/fs_project/testing/venv/lib/python3.11/site-packages/locust (Python 3.11.0rc1)",
+    "locustfile": "/home/ubuntu/fs_project/testing/tools/locustfile.py"
+  },
+  "accessibility_tools": {
+    "status": "success",
+    "tools": [
+      "axe-selenium-python",
+      "selenium",
+      "webdriver-manager"
+    ],
+    "selenium_version": "Selenium 4.33.0",
+    "test_script": "/home/ubuntu/fs_project/testing/tools/accessibility_test.py"
+  },
+  "visual_regression_tools": {
+    "status": "success",
+    "tools": [
+      "selenium",
+      "webdriver-manager",
+      "Pillow",
+      "opencv-python",
+      "scikit-image"
+    ],
+    "pillow_version": "Pillow 11.2.1",
+    "test_script": "/home/ubuntu/fs_project/testing/tools/visual_regression_test.py"
+  },
+  "api_testing_tools": {
+    "status": "success",
+    "tools": [
+      "requests",
+      "pytest-mock",
+      "responses",
+      "jsonschema",
+      "tavern"
+    ],
+    "requests_version": "Requests 2.32.4",
+    "test_script": "/home/ubuntu/fs_project/testing/tools/api_tester.py"
+  },
+  "overall_status": "success",
+  "success_rate": "7/7"
+}

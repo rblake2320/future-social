@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-06-17T20:14:53.961464",
+  "routes_count": 30,
+  "models_count": 9,
+  "services": [
+    "user_service",
+    "post_service",
+    "messaging_service",
+    "group_service",
+    "ai_sandbox_service"
+  ],
+  "artifacts": {
+    "api_routes": "api_routes.json",
+    "database_models": "database_models.json",
+    "service_dependencies": "service_dependencies.json",
+    "api_documentation": "api_documentation.md",
+    "database_diagram": "database_diagram.puml"
+  }
+}

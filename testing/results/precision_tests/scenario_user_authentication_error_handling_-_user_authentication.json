@@ -1,0 +1,60 @@
+{
+  "journey": "User Authentication",
+  "scenario": "Error Handling - User Authentication",
+  "steps_total": 2,
+  "steps_passed": 2,
+  "success_rate": 1.0,
+  "status": "pass",
+  "step_results": [
+    {
+      "id": "240c7dcf",
+      "action": "Invalid Register new user",
+      "method": "POST",
+      "path": "/register",
+      "input": {
+        "username": "",
+        "email": "invalid-email",
+        "password": "short"
+      },
+      "expected_result": "Error",
+      "status_code": 400,
+      "response": {
+        "success": false,
+        "message": "Invalid input",
+        "errors": [
+          "Username is required",
+          "Invalid email format"
+        ]
+      },
+      "duration_ms": 108.67810249328613,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:32.945856",
+      "tags": [
+        "critical"
+      ]
+    },
+    {
+      "id": "c8afb813",
+      "action": "Invalid Login with credentials",
+      "method": "POST",
+      "path": "/login",
+      "input": {
+        "email": "nonexistent@example.com",
+        "password": "WrongPassword"
+      },
+      "expected_result": "Error",
+      "status_code": 401,
+      "response": {
+        "success": false,
+        "message": "Invalid credentials"
+      },
+      "duration_ms": 181.41508102416992,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:33.127658",
+      "tags": [
+        "critical"
+      ]
+    }
+  ],
+  "timestamp": "2025-06-17T20:20:33.127702"
+}

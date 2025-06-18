@@ -1,0 +1,51 @@
+[
+  {
+    "test_name": "Security Headers",
+    "description": "Test if the application implements proper security headers",
+    "vulnerabilities": [
+      {
+        "severity": "High",
+        "description": "Missing Content-Security-Policy security header",
+        "recommendation": "Implement Content-Security-Policy header with appropriate values"
+      },
+      {
+        "severity": "Medium",
+        "description": "Missing X-Content-Type-Options security header",
+        "recommendation": "Implement X-Content-Type-Options header with appropriate values"
+      },
+      {
+        "severity": "Medium",
+        "description": "Missing X-Frame-Options security header",
+        "recommendation": "Implement X-Frame-Options header with appropriate values"
+      },
+      {
+        "severity": "High",
+        "description": "Missing Strict-Transport-Security security header",
+        "recommendation": "Implement Strict-Transport-Security header with appropriate values"
+      }
+    ]
+  },
+  {
+    "test_name": "Insecure Error Handling",
+    "description": "Test if the application leaks sensitive information in error messages",
+    "vulnerabilities": [
+      {
+        "severity": "Medium",
+        "endpoint": "GET /users/invalid",
+        "description": "Detailed technical error messages are exposed to users, potentially revealing implementation details",
+        "recommendation": "Implement custom error handling that logs detailed errors server-side but returns generic messages to users"
+      }
+    ]
+  },
+  {
+    "test_name": "Insecure Default Configurations",
+    "description": "Test if the application uses insecure default configurations",
+    "vulnerabilities": [
+      {
+        "severity": "Critical",
+        "description": "Default administrative credentials may be in use",
+        "recommendation": "Change all default credentials and implement strong password policies"
+      }
+    ]
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "name": "Authentication State Transitions",
+  "description": "Test transitions between unauthenticated and authenticated states",
+  "transition_results": [
+    {
+      "id": "c472cf33",
+      "from_state": "unauthenticated",
+      "to_state": "authenticated",
+      "action": "login",
+      "expected": "success",
+      "status": "pass",
+      "message": "Successfully transitioned from unauthenticated to authenticated",
+      "duration_ms": 187.00909614562988,
+      "timestamp": "2025-06-17T20:20:36.042687"
+    },
+    {
+      "id": "b6450b20",
+      "from_state": "authenticated",
+      "to_state": "unauthenticated",
+      "action": "logout",
+      "expected": "success",
+      "status": "pass",
+      "message": "Successfully transitioned from authenticated to unauthenticated",
+      "duration_ms": 180.1738739013672,
+      "timestamp": "2025-06-17T20:20:36.223204"
+    },
+    {
+      "id": "a0e064c7",
+      "from_state": "unauthenticated",
+      "to_state": "authenticated",
+      "action": "access_protected",
+      "expected": "error",
+      "status": "fail",
+      "message": "Incorrectly allowed transition from unauthenticated to authenticated",
+      "duration_ms": 77.60739326477051,
+      "timestamp": "2025-06-17T20:20:36.301143"
+    },
+    {
+      "id": "aec3d6f0",
+      "from_state": "authenticated",
+      "to_state": "authenticated",
+      "action": "refresh_token",
+      "expected": "success",
+      "status": "pass",
+      "message": "Successfully transitioned from authenticated to authenticated",
+      "duration_ms": 76.24173164367676,
+      "timestamp": "2025-06-17T20:20:36.377692"
+    }
+  ],
+  "timestamp": "2025-06-17T20:20:35.855545",
+  "success_rate": 0.75,
+  "status": "partial"
+}

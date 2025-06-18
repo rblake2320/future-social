@@ -1,0 +1,26 @@
+{
+  "timestamp": "2025-06-17T20:20:37.692299",
+  "environment": {
+    "mock_mode": true,
+    "test_users": 5,
+    "test_data_dir": "/home/ubuntu/fs_project/testing/results/precision_tests/test_data"
+  },
+  "precision_tests": {
+    "total_scenarios": 12,
+    "passed_scenarios": 12,
+    "partial_scenarios": 0,
+    "failed_scenarios": 0,
+    "overall_success_rate": 1.0,
+    "results_file": "/home/ubuntu/fs_project/testing/results/precision_tests/precision_test_results.json"
+  },
+  "state_tests": {
+    "total_tests": 3,
+    "passed_tests": 1,
+    "partial_tests": 2,
+    "failed_tests": 0,
+    "overall_success_rate": 0.3333333333333333,
+    "results_file": "/home/ubuntu/fs_project/testing/results/precision_tests/state_test_results.json"
+  },
+  "combined_success_rate": 0.6666666666666666,
+  "report_file": "/home/ubuntu/fs_project/testing/results/precision_tests/precision_test_report.md"
+}

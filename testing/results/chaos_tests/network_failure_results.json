@@ -1,0 +1,35 @@
+[
+  {
+    "endpoint": "GET /users/<int:user_id>",
+    "timeout_test": {
+      "success": true,
+      "error": "Simulated failure for chaos testing"
+    },
+    "interrupt_test": {
+      "success": true,
+      "error": "Simulated failure for chaos testing"
+    }
+  },
+  {
+    "endpoint": "POST /posts",
+    "timeout_test": {
+      "success": true,
+      "error": "Simulated failure for chaos testing"
+    },
+    "interrupt_test": {
+      "success": false,
+      "error": "Simulated connection interruption"
+    }
+  },
+  {
+    "endpoint": "GET /feed",
+    "timeout_test": {
+      "success": true,
+      "error": "Simulated failure for chaos testing"
+    },
+    "interrupt_test": {
+      "success": false,
+      "error": "Simulated failure for chaos testing"
+    }
+  }
+]

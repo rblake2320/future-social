@@ -1,0 +1,29 @@
+{
+  "journey": "Group Interaction",
+  "scenario": "Edge Cases - Group Interaction",
+  "steps_total": 1,
+  "steps_passed": 1,
+  "success_rate": 1.0,
+  "status": "pass",
+  "step_results": [
+    {
+      "id": "994b8036",
+      "action": "Edge case for View all groups",
+      "method": "GET",
+      "path": "/groups",
+      "input": {
+        "id": 0
+      },
+      "expected_result": "Handled appropriately",
+      "status_code": 200,
+      "response": {
+        "success": true,
+        "message": "Operation completed successfully"
+      },
+      "duration_ms": 175.9333610534668,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:35.852900"
+    }
+  ],
+  "timestamp": "2025-06-17T20:20:35.852959"
+}

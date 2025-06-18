@@ -1,0 +1,639 @@
+[
+  {
+    "journey": "User Authentication",
+    "scenario": "Happy Path - User Authentication",
+    "steps_total": 2,
+    "steps_passed": 2,
+    "success_rate": 1.0,
+    "status": "pass",
+    "step_results": [
+      {
+        "id": "c0601131",
+        "action": "Register new user",
+        "method": "POST",
+        "path": "/register",
+        "input": {
+          "username": "test_user",
+          "email": "test@example.com",
+          "password": "SecurePassword123!"
+        },
+        "expected_result": "Success",
+        "status_code": 200,
+        "response": {
+          "success": true,
+          "message": "Operation completed successfully",
+          "token": "mock_auth_token_789ab226",
+          "user_id": 110
+        },
+        "duration_ms": 130.24091720581055,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:32.779552",
+        "tags": [
+          "critical"
+        ]
+      },
+      {
+        "id": "dac9cdca",
+        "action": "Login with credentials",
+        "method": "POST",
+        "path": "/login",
+        "input": {
+          "email": "test@example.com",
+          "password": "SecurePassword123!"
+        },
+        "expected_result": "Success",
+        "status_code": 200,
+        "response": {
+          "success": true,
+          "message": "Operation completed successfully",
+          "token": "mock_auth_token_e413f2c0",
+          "user_id": 460
+        },
+        "duration_ms": 56.48970603942871,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:32.836319",
+        "tags": [
+          "critical"
+        ]
+      }
+    ],
+    "timestamp": "2025-06-17T20:20:32.836355"
+  },
+  {
+    "journey": "User Authentication",
+    "scenario": "Error Handling - User Authentication",
+    "steps_total": 2,
+    "steps_passed": 2,
+    "success_rate": 1.0,
+    "status": "pass",
+    "step_results": [
+      {
+        "id": "240c7dcf",
+        "action": "Invalid Register new user",
+        "method": "POST",
+        "path": "/register",
+        "input": {
+          "username": "",
+          "email": "invalid-email",
+          "password": "short"
+        },
+        "expected_result": "Error",
+        "status_code": 400,
+        "response": {
+          "success": false,
+          "message": "Invalid input",
+          "errors": [
+            "Username is required",
+            "Invalid email format"
+          ]
+        },
+        "duration_ms": 108.67810249328613,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:32.945856",
+        "tags": [
+          "critical"
+        ]
+      },
+      {
+        "id": "c8afb813",
+        "action": "Invalid Login with credentials",
+        "method": "POST",
+        "path": "/login",
+        "input": {
+          "email": "nonexistent@example.com",
+          "password": "WrongPassword"
+        },
+        "expected_result": "Error",
+        "status_code": 401,
+        "response": {
+          "success": false,
+          "message": "Invalid credentials"
+        },
+        "duration_ms": 181.41508102416992,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:33.127658",
+        "tags": [
+          "critical"
+        ]
+      }
+    ],
+    "timestamp": "2025-06-17T20:20:33.127702"
+  },
+  {
+    "journey": "User Authentication",
+    "scenario": "Edge Cases - User Authentication",
+    "steps_total": 2,
+    "steps_passed": 2,
+    "success_rate": 1.0,
+    "status": "pass",
+    "step_results": [
+      {
+        "id": "012481cc",
+        "action": "Edge case for Register new user",
+        "method": "POST",
+        "path": "/register",
+        "input": {
+          "username": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "email": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com",
+          "password": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA123!"
+        },
+        "expected_result": "Handled appropriately",
+        "status_code": 200,
+        "response": {
+          "success": true,
+          "message": "Operation completed successfully",
+          "token": "mock_auth_token_c9ab81a2",
+          "user_id": 83
+        },
+        "duration_ms": 59.351205825805664,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:33.188004",
+        "tags": [
+          "critical"
+        ]
+      },
+      {
+        "id": "4c2c4ae8",
+        "action": "Edge case for Login with credentials",
+        "method": "POST",
+        "path": "/login",
+        "input": {
+          "id": 0
+        },
+        "expected_result": "Handled appropriately",
+        "status_code": 200,
+        "response": {
+          "success": true,
+          "message": "Operation completed successfully",
+          "token": "mock_auth_token_403364bb",
+          "user_id": 828
+        },
+        "duration_ms": 112.42508888244629,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:33.300788",
+        "tags": [
+          "critical"
+        ]
+      }
+    ],
+    "timestamp": "2025-06-17T20:20:33.300825"
+  },
+  {
+    "journey": "Content Creation and Viewing",
+    "scenario": "Happy Path - Content Creation and Viewing",
+    "steps_total": 2,
+    "steps_passed": 2,
+    "success_rate": 1.0,
+    "status": "pass",
+    "step_results": [
+      {
+        "id": "450ef489",
+        "action": "Create new post",
+        "method": "POST",
+        "path": "/posts",
+        "input": {
+          "title": "Sample Post Title",
+          "content": "This is a sample post content for testing purposes.",
+          "user_id": 1
+        },
+        "expected_result": "Success",
+        "status_code": 200,
+        "response": {
+          "success": true,
+          "message": "Operation completed successfully",
+          "post_id": 826
+        },
+        "duration_ms": 83.00161361694336,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:33.384693"
+      },
+      {
+        "id": "ec18fd4c",
+        "action": "View personalized feed",
+        "method": "GET",
+        "path": "/feed",
+        "input": {
+          "id": 1
+        },
+        "expected_result": "Success",
+        "status_code": 200,
+        "response": {
+          "success": true,
+          "message": "Operation completed successfully"
+        },
+        "duration_ms": 187.41321563720703,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:33.572435"
+      }
+    ],
+    "timestamp": "2025-06-17T20:20:33.572474"
+  },
+  {
+    "journey": "Content Creation and Viewing",
+    "scenario": "Error Handling - Content Creation and Viewing",
+    "steps_total": 1,
+    "steps_passed": 1,
+    "success_rate": 1.0,
+    "status": "pass",
+    "step_results": [
+      {
+        "id": "bc575c17",
+        "action": "Invalid Create new post",
+        "method": "POST",
+        "path": "/posts",
+        "input": {
+          "title": "",
+          "content": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+          "user_id": -1
+        },
+        "expected_result": "Error",
+        "status_code": 400,
+        "response": {
+          "success": false,
+          "message": "Operation failed"
+        },
+        "duration_ms": 131.05511665344238,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:33.704300"
+      }
+    ],
+    "timestamp": "2025-06-17T20:20:33.704356"
+  },
+  {
+    "journey": "Content Creation and Viewing",
+    "scenario": "Edge Cases - Content Creation and Viewing",
+    "steps_total": 1,
+    "steps_passed": 1,
+    "success_rate": 1.0,
+    "status": "pass",
+    "step_results": [
+      {
+        "id": "7990681e",
+        "action": "Edge case for View personalized feed",
+        "method": "GET",
+        "path": "/feed",
+        "input": {
+          "id": 0
+        },
+        "expected_result": "Handled appropriately",
+        "status_code": 200,
+        "response": {
+          "success": true,
+          "message": "Operation completed successfully"
+        },
+        "duration_ms": 184.5259666442871,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:33.889697"
+      }
+    ],
+    "timestamp": "2025-06-17T20:20:33.889735"
+  },
+  {
+    "journey": "Direct Messaging",
+    "scenario": "Happy Path - Direct Messaging",
+    "steps_total": 3,
+    "steps_passed": 3,
+    "success_rate": 1.0,
+    "status": "pass",
+    "step_results": [
+      {
+        "id": "210c9eea",
+        "action": "Start new conversation",
+        "method": "POST",
+        "path": "/conversations",
+        "input": {},
+        "expected_result": "Success",
+        "status_code": 200,
+        "response": {
+          "success": true,
+          "message": "Operation completed successfully"
+        },
+        "duration_ms": 193.19629669189453,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:34.083806"
+      },
+      {
+        "id": "0092c8d1",
+        "action": "Send message",
+        "method": "POST",
+        "path": "/conversations/<int:conversation_id>/messages",
+        "input": {
+          "content": "Hello, this is a test message!",
+          "sender_id": 1,
+          "recipient_id": 2
+        },
+        "expected_result": "Success",
+        "status_code": 200,
+        "response": {
+          "success": true,
+          "message": "Operation completed successfully",
+          "message_id": 732
+        },
+        "duration_ms": 119.43387985229492,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:34.203570"
+      },
+      {
+        "id": "c529c68f",
+        "action": "View messages",
+        "method": "GET",
+        "path": "/conversations/<int:conversation_id>/messages",
+        "input": {
+          "id": 1
+        },
+        "expected_result": "Success",
+        "status_code": 200,
+        "response": {
+          "success": true,
+          "message": "Operation completed successfully"
+        },
+        "duration_ms": 123.3053207397461,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:34.327175"
+      }
+    ],
+    "timestamp": "2025-06-17T20:20:34.327216"
+  },
+  {
+    "journey": "Direct Messaging",
+    "scenario": "Error Handling - Direct Messaging",
+    "steps_total": 2,
+    "steps_passed": 2,
+    "success_rate": 1.0,
+    "status": "pass",
+    "step_results": [
+      {
+        "id": "dc0d6d63",
+        "action": "Invalid Start new conversation",
+        "method": "POST",
+        "path": "/conversations",
+        "input": {
+          "id": 9999
+        },
+        "expected_result": "Error",
+        "status_code": 400,
+        "response": {
+          "success": false,
+          "message": "Operation failed"
+        },
+        "duration_ms": 122.64633178710938,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:34.450679"
+      },
+      {
+        "id": "4df86c65",
+        "action": "Invalid Send message",
+        "method": "POST",
+        "path": "/conversations/<int:conversation_id>/messages",
+        "input": {
+          "content": "",
+          "sender_id": 999,
+          "recipient_id": 999
+        },
+        "expected_result": "Error",
+        "status_code": 400,
+        "response": {
+          "success": false,
+          "message": "Operation failed"
+        },
+        "duration_ms": 69.32735443115234,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:34.520485"
+      }
+    ],
+    "timestamp": "2025-06-17T20:20:34.520526"
+  },
+  {
+    "journey": "Direct Messaging",
+    "scenario": "Edge Cases - Direct Messaging",
+    "steps_total": 2,
+    "steps_passed": 2,
+    "success_rate": 1.0,
+    "status": "pass",
+    "step_results": [
+      {
+        "id": "dc099bb9",
+        "action": "Edge case for Start new conversation",
+        "method": "POST",
+        "path": "/conversations",
+        "input": {
+          "id": 0
+        },
+        "expected_result": "Handled appropriately",
+        "status_code": 200,
+        "response": {
+          "success": true,
+          "message": "Operation completed successfully"
+        },
+        "duration_ms": 82.85188674926758,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:34.604161"
+      },
+      {
+        "id": "75d89fad",
+        "action": "Edge case for Send message",
+        "method": "POST",
+        "path": "/conversations/<int:conversation_id>/messages",
+        "input": {
+          "content": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "sender_id": 1,
+          "recipient_id": 1
+        },
+        "expected_result": "Handled appropriately",
+        "status_code": 200,
+        "response": {
+          "success": true,
+          "message": "Operation completed successfully",
+          "message_id": 188
+        },
+        "duration_ms": 60.99963188171387,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:34.665451"
+      }
+    ],
+    "timestamp": "2025-06-17T20:20:34.665494"
+  },
+  {
+    "journey": "Group Interaction",
+    "scenario": "Happy Path - Group Interaction",
+    "steps_total": 4,
+    "steps_passed": 4,
+    "success_rate": 1.0,
+    "status": "pass",
+    "step_results": [
+      {
+        "id": "a1294ebf",
+        "action": "View all groups",
+        "method": "GET",
+        "path": "/groups",
+        "input": {
+          "id": 1
+        },
+        "expected_result": "Success",
+        "status_code": 200,
+        "response": {
+          "success": true,
+          "message": "Operation completed successfully"
+        },
+        "duration_ms": 180.65309524536133,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:34.847105"
+      },
+      {
+        "id": "f2d80c1e",
+        "action": "Create new group",
+        "method": "POST",
+        "path": "/groups",
+        "input": {
+          "name": "Test Group",
+          "description": "This is a test group for testing purposes.",
+          "creator_id": 1
+        },
+        "expected_result": "Success",
+        "status_code": 200,
+        "response": {
+          "success": true,
+          "message": "Operation completed successfully"
+        },
+        "duration_ms": 58.940887451171875,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:34.906692"
+      },
+      {
+        "id": "c3bf1cfb",
+        "action": "Join group",
+        "method": "POST",
+        "path": "/groups/<int:group_id>/join",
+        "input": {
+          "name": "Test Group",
+          "description": "This is a test group for testing purposes.",
+          "creator_id": 1
+        },
+        "expected_result": "Success",
+        "status_code": 200,
+        "response": {
+          "success": true,
+          "message": "Operation completed successfully"
+        },
+        "duration_ms": 135.2853775024414,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:35.042377"
+      },
+      {
+        "id": "49a2feec",
+        "action": "Leave group",
+        "method": "POST",
+        "path": "/groups/<int:group_id>/leave",
+        "input": {
+          "name": "Test Group",
+          "description": "This is a test group for testing purposes.",
+          "creator_id": 1
+        },
+        "expected_result": "Success",
+        "status_code": 200,
+        "response": {
+          "success": true,
+          "message": "Operation completed successfully"
+        },
+        "duration_ms": 145.43986320495605,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:35.188159"
+      }
+    ],
+    "timestamp": "2025-06-17T20:20:35.188200"
+  },
+  {
+    "journey": "Group Interaction",
+    "scenario": "Error Handling - Group Interaction",
+    "steps_total": 3,
+    "steps_passed": 3,
+    "success_rate": 1.0,
+    "status": "pass",
+    "step_results": [
+      {
+        "id": "29255f4a",
+        "action": "Invalid Create new group",
+        "method": "POST",
+        "path": "/groups",
+        "input": {
+          "id": 9999
+        },
+        "expected_result": "Error",
+        "status_code": 400,
+        "response": {
+          "success": false,
+          "message": "Operation failed"
+        },
+        "duration_ms": 192.77167320251465,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:35.381791"
+      },
+      {
+        "id": "4c7904ad",
+        "action": "Invalid Join group",
+        "method": "POST",
+        "path": "/groups/<int:group_id>/join",
+        "input": {
+          "id": 9999
+        },
+        "expected_result": "Error",
+        "status_code": 400,
+        "response": {
+          "success": false,
+          "message": "Operation failed"
+        },
+        "duration_ms": 152.1315574645996,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:35.534313"
+      },
+      {
+        "id": "21e5565f",
+        "action": "Invalid Leave group",
+        "method": "POST",
+        "path": "/groups/<int:group_id>/leave",
+        "input": {
+          "id": 9999
+        },
+        "expected_result": "Error",
+        "status_code": 400,
+        "response": {
+          "success": false,
+          "message": "Operation failed"
+        },
+        "duration_ms": 141.44420623779297,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:35.676105"
+      }
+    ],
+    "timestamp": "2025-06-17T20:20:35.676146"
+  },
+  {
+    "journey": "Group Interaction",
+    "scenario": "Edge Cases - Group Interaction",
+    "steps_total": 1,
+    "steps_passed": 1,
+    "success_rate": 1.0,
+    "status": "pass",
+    "step_results": [
+      {
+        "id": "994b8036",
+        "action": "Edge case for View all groups",
+        "method": "GET",
+        "path": "/groups",
+        "input": {
+          "id": 0
+        },
+        "expected_result": "Handled appropriately",
+        "status_code": 200,
+        "response": {
+          "success": true,
+          "message": "Operation completed successfully"
+        },
+        "duration_ms": 175.9333610534668,
+        "status": "pass",
+        "timestamp": "2025-06-17T20:20:35.852900"
+      }
+    ],
+    "timestamp": "2025-06-17T20:20:35.852959"
+  }
+]

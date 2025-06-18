@@ -1,0 +1,29 @@
+[
+  {
+    "test_name": "Horizontal Privilege Escalation",
+    "description": "Test if users can access resources belonging to other users of the same privilege level",
+    "vulnerabilities": []
+  },
+  {
+    "test_name": "Vertical Privilege Escalation",
+    "description": "Test if users can access resources requiring higher privilege levels",
+    "vulnerabilities": [
+      {
+        "severity": "Critical",
+        "description": "Regular users can access admin endpoint /admin/users",
+        "recommendation": "Implement proper role-based access control for all administrative functions"
+      }
+    ]
+  },
+  {
+    "test_name": "Missing Function Level Access Control",
+    "description": "Test if the application properly restricts access to functions based on user roles",
+    "vulnerabilities": [
+      {
+        "severity": "High",
+        "description": "Hidden function /api/internal/debug is accessible without proper authorization",
+        "recommendation": "Implement consistent authorization checks for all functions, regardless of UI visibility"
+      }
+    ]
+  }
+]

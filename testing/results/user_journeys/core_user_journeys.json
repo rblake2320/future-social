@@ -1,0 +1,92 @@
+[
+  {
+    "name": "User Authentication",
+    "description": "User registration, login, and profile management",
+    "steps": [
+      {
+        "name": "Register new user",
+        "method": "POST",
+        "path": "/register",
+        "service": "user_service"
+      },
+      {
+        "name": "Login with credentials",
+        "method": "POST",
+        "path": "/login",
+        "service": "user_service"
+      }
+    ]
+  },
+  {
+    "name": "Content Creation and Viewing",
+    "description": "Creating, viewing, and interacting with posts",
+    "steps": [
+      {
+        "name": "Create new post",
+        "method": "POST",
+        "path": "/posts",
+        "service": "post_service"
+      },
+      {
+        "name": "View personalized feed",
+        "method": "GET",
+        "path": "/feed",
+        "service": "post_service"
+      }
+    ]
+  },
+  {
+    "name": "Direct Messaging",
+    "description": "Sending and receiving direct messages",
+    "steps": [
+      {
+        "name": "Start new conversation",
+        "method": "POST",
+        "path": "/conversations",
+        "service": "messaging_service"
+      },
+      {
+        "name": "Send message",
+        "method": "POST",
+        "path": "/conversations/<int:conversation_id>/messages",
+        "service": "messaging_service"
+      },
+      {
+        "name": "View messages",
+        "method": "GET",
+        "path": "/conversations/<int:conversation_id>/messages",
+        "service": "messaging_service"
+      }
+    ]
+  },
+  {
+    "name": "Group Interaction",
+    "description": "Creating, joining, and participating in groups",
+    "steps": [
+      {
+        "name": "View all groups",
+        "method": "GET",
+        "path": "/groups",
+        "service": "group_service"
+      },
+      {
+        "name": "Create new group",
+        "method": "POST",
+        "path": "/groups",
+        "service": "group_service"
+      },
+      {
+        "name": "Join group",
+        "method": "POST",
+        "path": "/groups/<int:group_id>/join",
+        "service": "group_service"
+      },
+      {
+        "name": "Leave group",
+        "method": "POST",
+        "path": "/groups/<int:group_id>/leave",
+        "service": "group_service"
+      }
+    ]
+  }
+]

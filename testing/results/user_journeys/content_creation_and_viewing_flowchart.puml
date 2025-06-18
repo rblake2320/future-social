@@ -1,0 +1,9 @@
+@startuml
+!theme plain
+title Content Creation and Viewing Journey
+
+start
+:Create new post;
+:View personalized feed;
+stop
+@enduml

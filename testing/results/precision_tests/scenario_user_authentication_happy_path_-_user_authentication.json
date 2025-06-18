@@ -1,0 +1,60 @@
+{
+  "journey": "User Authentication",
+  "scenario": "Happy Path - User Authentication",
+  "steps_total": 2,
+  "steps_passed": 2,
+  "success_rate": 1.0,
+  "status": "pass",
+  "step_results": [
+    {
+      "id": "c0601131",
+      "action": "Register new user",
+      "method": "POST",
+      "path": "/register",
+      "input": {
+        "username": "test_user",
+        "email": "test@example.com",
+        "password": "SecurePassword123!"
+      },
+      "expected_result": "Success",
+      "status_code": 200,
+      "response": {
+        "success": true,
+        "message": "Operation completed successfully",
+        "token": "mock_auth_token_789ab226",
+        "user_id": 110
+      },
+      "duration_ms": 130.24091720581055,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:32.779552",
+      "tags": [
+        "critical"
+      ]
+    },
+    {
+      "id": "dac9cdca",
+      "action": "Login with credentials",
+      "method": "POST",
+      "path": "/login",
+      "input": {
+        "email": "test@example.com",
+        "password": "SecurePassword123!"
+      },
+      "expected_result": "Success",
+      "status_code": 200,
+      "response": {
+        "success": true,
+        "message": "Operation completed successfully",
+        "token": "mock_auth_token_e413f2c0",
+        "user_id": 460
+      },
+      "duration_ms": 56.48970603942871,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:32.836319",
+      "tags": [
+        "critical"
+      ]
+    }
+  ],
+  "timestamp": "2025-06-17T20:20:32.836355"
+}

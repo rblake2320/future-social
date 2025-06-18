@@ -1,0 +1,11 @@
+@startuml
+!theme plain
+title Group Interaction Journey
+
+start
+:View all groups;
+:Create new group;
+:Join group;
+:Leave group;
+stop
+@enduml

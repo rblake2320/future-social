@@ -1,0 +1,312 @@
+[
+  {
+    "endpoint_group": "/users/register",
+    "results_by_load": [
+      {
+        "endpoint": "POST /users/register",
+        "num_users": 5,
+        "duration_seconds": 10,
+        "total_requests": 100,
+        "successful_requests": 100,
+        "failed_requests": 0,
+        "avg_latency_ms": 30.136857460011015,
+        "p95_latency_ms": 49.17579360039781,
+        "min_latency_ms": 10.235373999421427,
+        "max_latency_ms": 49.942263000048115,
+        "rps": 10.0
+      },
+      {
+        "endpoint": "POST /users/register",
+        "num_users": 20,
+        "duration_seconds": 20,
+        "total_requests": 793,
+        "successful_requests": 793,
+        "failed_requests": 0,
+        "avg_latency_ms": 30.2778836191601,
+        "p95_latency_ms": 48.07822549973935,
+        "min_latency_ms": 10.166894000576576,
+        "max_latency_ms": 50.4585569997289,
+        "rps": 39.65
+      }
+    ]
+  },
+  {
+    "endpoint_group": "/users/login",
+    "results_by_load": [
+      {
+        "endpoint": "POST /users/login",
+        "num_users": 5,
+        "duration_seconds": 10,
+        "total_requests": 100,
+        "successful_requests": 100,
+        "failed_requests": 0,
+        "avg_latency_ms": 30.012065340015397,
+        "p95_latency_ms": 47.21758454943483,
+        "min_latency_ms": 10.283184999934747,
+        "max_latency_ms": 48.8360150002336,
+        "rps": 10.0
+      },
+      {
+        "endpoint": "POST /users/login",
+        "num_users": 20,
+        "duration_seconds": 20,
+        "total_requests": 794,
+        "successful_requests": 794,
+        "failed_requests": 0,
+        "avg_latency_ms": 30.341578298496916,
+        "p95_latency_ms": 48.402193250012715,
+        "min_latency_ms": 10.271021000335168,
+        "max_latency_ms": 50.183340000330645,
+        "rps": 39.7
+      }
+    ]
+  },
+  {
+    "endpoint_group": "/users/<int:user_id>",
+    "results_by_load": [
+      {
+        "endpoint": "GET /users/<int:user_id>",
+        "num_users": 5,
+        "duration_seconds": 10,
+        "total_requests": 100,
+        "successful_requests": 100,
+        "failed_requests": 0,
+        "avg_latency_ms": 28.546698519949132,
+        "p95_latency_ms": 48.08651194939557,
+        "min_latency_ms": 10.287267000421707,
+        "max_latency_ms": 50.16594799963059,
+        "rps": 10.0
+      },
+      {
+        "endpoint": "GET /users/<int:user_id>",
+        "num_users": 20,
+        "duration_seconds": 20,
+        "total_requests": 793,
+        "successful_requests": 793,
+        "failed_requests": 0,
+        "avg_latency_ms": 29.291090464042984,
+        "p95_latency_ms": 48.147117299504316,
+        "min_latency_ms": 10.324615000172344,
+        "max_latency_ms": 50.10529000082897,
+        "rps": 39.65
+      }
+    ]
+  },
+  {
+    "endpoint_group": "/posts",
+    "results_by_load": [
+      {
+        "endpoint": "POST /posts",
+        "num_users": 5,
+        "duration_seconds": 10,
+        "total_requests": 100,
+        "successful_requests": 100,
+        "failed_requests": 0,
+        "avg_latency_ms": 30.74723344998347,
+        "p95_latency_ms": 47.97820839967244,
+        "min_latency_ms": 10.29961199947138,
+        "max_latency_ms": 49.71070600004168,
+        "rps": 10.0
+      },
+      {
+        "endpoint": "POST /posts",
+        "num_users": 20,
+        "duration_seconds": 20,
+        "total_requests": 793,
+        "successful_requests": 793,
+        "failed_requests": 0,
+        "avg_latency_ms": 30.25554422573143,
+        "p95_latency_ms": 48.20917110000664,
+        "min_latency_ms": 10.145716999431897,
+        "max_latency_ms": 50.14231099994504,
+        "rps": 39.65
+      }
+    ]
+  },
+  {
+    "endpoint_group": "/posts",
+    "results_by_load": [
+      {
+        "endpoint": "GET /posts",
+        "num_users": 5,
+        "duration_seconds": 10,
+        "total_requests": 100,
+        "successful_requests": 100,
+        "failed_requests": 0,
+        "avg_latency_ms": 30.80948208992595,
+        "p95_latency_ms": 47.79884785048125,
+        "min_latency_ms": 10.22892699984368,
+        "max_latency_ms": 49.859980000292126,
+        "rps": 10.0
+      },
+      {
+        "endpoint": "GET /posts",
+        "num_users": 20,
+        "duration_seconds": 20,
+        "total_requests": 793,
+        "successful_requests": 793,
+        "failed_requests": 0,
+        "avg_latency_ms": 29.830420501889336,
+        "p95_latency_ms": 47.78519680021418,
+        "min_latency_ms": 10.160342999370187,
+        "max_latency_ms": 50.18187400037277,
+        "rps": 39.65
+      }
+    ]
+  },
+  {
+    "endpoint_group": "/feed",
+    "results_by_load": [
+      {
+        "endpoint": "GET /feed",
+        "num_users": 5,
+        "duration_seconds": 10,
+        "total_requests": 100,
+        "successful_requests": 100,
+        "failed_requests": 0,
+        "avg_latency_ms": 31.106379570046556,
+        "p95_latency_ms": 48.56460725050056,
+        "min_latency_ms": 10.460757999680936,
+        "max_latency_ms": 50.0826870002129,
+        "rps": 10.0
+      },
+      {
+        "endpoint": "GET /feed",
+        "num_users": 20,
+        "duration_seconds": 20,
+        "total_requests": 793,
+        "successful_requests": 793,
+        "failed_requests": 0,
+        "avg_latency_ms": 30.449988481701592,
+        "p95_latency_ms": 48.29162029964209,
+        "min_latency_ms": 10.1657149998573,
+        "max_latency_ms": 50.09525599962217,
+        "rps": 39.65
+      }
+    ]
+  },
+  {
+    "endpoint_group": "/conversations",
+    "results_by_load": [
+      {
+        "endpoint": "POST /conversations",
+        "num_users": 5,
+        "duration_seconds": 10,
+        "total_requests": 100,
+        "successful_requests": 100,
+        "failed_requests": 0,
+        "avg_latency_ms": 30.874322270046832,
+        "p95_latency_ms": 49.1590627498681,
+        "min_latency_ms": 10.615475000122387,
+        "max_latency_ms": 49.96875800043199,
+        "rps": 10.0
+      },
+      {
+        "endpoint": "POST /conversations",
+        "num_users": 20,
+        "duration_seconds": 20,
+        "total_requests": 794,
+        "successful_requests": 794,
+        "failed_requests": 0,
+        "avg_latency_ms": 30.17870728588545,
+        "p95_latency_ms": 48.22514825013968,
+        "min_latency_ms": 10.269260000313807,
+        "max_latency_ms": 50.059461000273586,
+        "rps": 39.7
+      }
+    ]
+  },
+  {
+    "endpoint_group": "/conversations",
+    "results_by_load": [
+      {
+        "endpoint": "GET /conversations",
+        "num_users": 5,
+        "duration_seconds": 10,
+        "total_requests": 100,
+        "successful_requests": 100,
+        "failed_requests": 0,
+        "avg_latency_ms": 31.171669620043758,
+        "p95_latency_ms": 46.82723880009689,
+        "min_latency_ms": 10.213517000011052,
+        "max_latency_ms": 48.879554999984975,
+        "rps": 10.0
+      },
+      {
+        "endpoint": "GET /conversations",
+        "num_users": 20,
+        "duration_seconds": 20,
+        "total_requests": 793,
+        "successful_requests": 793,
+        "failed_requests": 0,
+        "avg_latency_ms": 29.427299308939112,
+        "p95_latency_ms": 47.867272699750174,
+        "min_latency_ms": 10.309315999620594,
+        "max_latency_ms": 50.08190399985324,
+        "rps": 39.65
+      }
+    ]
+  },
+  {
+    "endpoint_group": "/ai/modules",
+    "results_by_load": [
+      {
+        "endpoint": "GET /ai/modules",
+        "num_users": 5,
+        "duration_seconds": 10,
+        "total_requests": 100,
+        "successful_requests": 100,
+        "failed_requests": 0,
+        "avg_latency_ms": 30.412853930019992,
+        "p95_latency_ms": 48.70130644958408,
+        "min_latency_ms": 10.679588000130025,
+        "max_latency_ms": 49.73109200000181,
+        "rps": 10.0
+      },
+      {
+        "endpoint": "GET /ai/modules",
+        "num_users": 20,
+        "duration_seconds": 20,
+        "total_requests": 793,
+        "successful_requests": 793,
+        "failed_requests": 0,
+        "avg_latency_ms": 30.327368479151712,
+        "p95_latency_ms": 48.245374799898855,
+        "min_latency_ms": 10.177662999922177,
+        "max_latency_ms": 50.08677500063641,
+        "rps": 39.65
+      }
+    ]
+  },
+  {
+    "endpoint_group": "/ai/preferences",
+    "results_by_load": [
+      {
+        "endpoint": "POST /ai/preferences",
+        "num_users": 5,
+        "duration_seconds": 10,
+        "total_requests": 100,
+        "successful_requests": 100,
+        "failed_requests": 0,
+        "avg_latency_ms": 30.229690579953967,
+        "p95_latency_ms": 48.703538000700064,
+        "min_latency_ms": 10.59566599997197,
+        "max_latency_ms": 57.06670099971234,
+        "rps": 10.0
+      },
+      {
+        "endpoint": "POST /ai/preferences",
+        "num_users": 20,
+        "duration_seconds": 20,
+        "total_requests": 793,
+        "successful_requests": 793,
+        "failed_requests": 0,
+        "avg_latency_ms": 29.971805306420187,
+        "p95_latency_ms": 47.73198409993711,
+        "min_latency_ms": 10.167507000005571,
+        "max_latency_ms": 50.137357000494376,
+        "rps": 39.65
+      }
+    ]
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "journey": "Direct Messaging",
+  "scenario": "Happy Path - Direct Messaging",
+  "steps_total": 3,
+  "steps_passed": 3,
+  "success_rate": 1.0,
+  "status": "pass",
+  "step_results": [
+    {
+      "id": "210c9eea",
+      "action": "Start new conversation",
+      "method": "POST",
+      "path": "/conversations",
+      "input": {},
+      "expected_result": "Success",
+      "status_code": 200,
+      "response": {
+        "success": true,
+        "message": "Operation completed successfully"
+      },
+      "duration_ms": 193.19629669189453,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:34.083806"
+    },
+    {
+      "id": "0092c8d1",
+      "action": "Send message",
+      "method": "POST",
+      "path": "/conversations/<int:conversation_id>/messages",
+      "input": {
+        "content": "Hello, this is a test message!",
+        "sender_id": 1,
+        "recipient_id": 2
+      },
+      "expected_result": "Success",
+      "status_code": 200,
+      "response": {
+        "success": true,
+        "message": "Operation completed successfully",
+        "message_id": 732
+      },
+      "duration_ms": 119.43387985229492,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:34.203570"
+    },
+    {
+      "id": "c529c68f",
+      "action": "View messages",
+      "method": "GET",
+      "path": "/conversations/<int:conversation_id>/messages",
+      "input": {
+        "id": 1
+      },
+      "expected_result": "Success",
+      "status_code": 200,
+      "response": {
+        "success": true,
+        "message": "Operation completed successfully"
+      },
+      "duration_ms": 123.3053207397461,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:34.327175"
+    }
+  ],
+  "timestamp": "2025-06-17T20:20:34.327216"
+}

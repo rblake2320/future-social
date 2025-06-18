@@ -1,0 +1,29 @@
+{
+  "journey": "Content Creation and Viewing",
+  "scenario": "Edge Cases - Content Creation and Viewing",
+  "steps_total": 1,
+  "steps_passed": 1,
+  "success_rate": 1.0,
+  "status": "pass",
+  "step_results": [
+    {
+      "id": "7990681e",
+      "action": "Edge case for View personalized feed",
+      "method": "GET",
+      "path": "/feed",
+      "input": {
+        "id": 0
+      },
+      "expected_result": "Handled appropriately",
+      "status_code": 200,
+      "response": {
+        "success": true,
+        "message": "Operation completed successfully"
+      },
+      "duration_ms": 184.5259666442871,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:33.889697"
+    }
+  ],
+  "timestamp": "2025-06-17T20:20:33.889735"
+}

@@ -1,0 +1,64 @@
+{
+  "name": "Content Creation State Transitions",
+  "description": "Test transitions related to content creation and editing",
+  "transition_results": [
+    {
+      "id": "abac6472",
+      "from_state": "no_content",
+      "to_state": "draft",
+      "action": "create_draft",
+      "expected": "success",
+      "status": "pass",
+      "message": "Successfully transitioned from no_content to draft",
+      "duration_ms": 116.32871627807617,
+      "timestamp": "2025-06-17T20:20:36.494975"
+    },
+    {
+      "id": "d6a0e75e",
+      "from_state": "draft",
+      "to_state": "published",
+      "action": "publish",
+      "expected": "success",
+      "status": "pass",
+      "message": "Successfully transitioned from draft to published",
+      "duration_ms": 148.19574356079102,
+      "timestamp": "2025-06-17T20:20:36.643474"
+    },
+    {
+      "id": "3f84c3d9",
+      "from_state": "published",
+      "to_state": "edited",
+      "action": "edit",
+      "expected": "success",
+      "status": "pass",
+      "message": "Successfully transitioned from published to edited",
+      "duration_ms": 160.65502166748047,
+      "timestamp": "2025-06-17T20:20:36.804496"
+    },
+    {
+      "id": "7a0095ab",
+      "from_state": "published",
+      "to_state": "deleted",
+      "action": "delete",
+      "expected": "success",
+      "status": "pass",
+      "message": "Successfully transitioned from published to deleted",
+      "duration_ms": 129.6076774597168,
+      "timestamp": "2025-06-17T20:20:36.934447"
+    },
+    {
+      "id": "8583634b",
+      "from_state": "deleted",
+      "to_state": "published",
+      "action": "restore",
+      "expected": "success",
+      "status": "pass",
+      "message": "Successfully transitioned from deleted to published",
+      "duration_ms": 101.34649276733398,
+      "timestamp": "2025-06-17T20:20:37.036088"
+    }
+  ],
+  "timestamp": "2025-06-17T20:20:36.378550",
+  "success_rate": 1.0,
+  "status": "pass"
+}

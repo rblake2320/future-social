@@ -1,0 +1,172 @@
+[
+  {
+    "name": "Authentication State Transitions",
+    "description": "Test transitions between unauthenticated and authenticated states",
+    "transition_results": [
+      {
+        "id": "c472cf33",
+        "from_state": "unauthenticated",
+        "to_state": "authenticated",
+        "action": "login",
+        "expected": "success",
+        "status": "pass",
+        "message": "Successfully transitioned from unauthenticated to authenticated",
+        "duration_ms": 187.00909614562988,
+        "timestamp": "2025-06-17T20:20:36.042687"
+      },
+      {
+        "id": "b6450b20",
+        "from_state": "authenticated",
+        "to_state": "unauthenticated",
+        "action": "logout",
+        "expected": "success",
+        "status": "pass",
+        "message": "Successfully transitioned from authenticated to unauthenticated",
+        "duration_ms": 180.1738739013672,
+        "timestamp": "2025-06-17T20:20:36.223204"
+      },
+      {
+        "id": "a0e064c7",
+        "from_state": "unauthenticated",
+        "to_state": "authenticated",
+        "action": "access_protected",
+        "expected": "error",
+        "status": "fail",
+        "message": "Incorrectly allowed transition from unauthenticated to authenticated",
+        "duration_ms": 77.60739326477051,
+        "timestamp": "2025-06-17T20:20:36.301143"
+      },
+      {
+        "id": "aec3d6f0",
+        "from_state": "authenticated",
+        "to_state": "authenticated",
+        "action": "refresh_token",
+        "expected": "success",
+        "status": "pass",
+        "message": "Successfully transitioned from authenticated to authenticated",
+        "duration_ms": 76.24173164367676,
+        "timestamp": "2025-06-17T20:20:36.377692"
+      }
+    ],
+    "timestamp": "2025-06-17T20:20:35.855545",
+    "success_rate": 0.75,
+    "status": "partial"
+  },
+  {
+    "name": "Content Creation State Transitions",
+    "description": "Test transitions related to content creation and editing",
+    "transition_results": [
+      {
+        "id": "abac6472",
+        "from_state": "no_content",
+        "to_state": "draft",
+        "action": "create_draft",
+        "expected": "success",
+        "status": "pass",
+        "message": "Successfully transitioned from no_content to draft",
+        "duration_ms": 116.32871627807617,
+        "timestamp": "2025-06-17T20:20:36.494975"
+      },
+      {
+        "id": "d6a0e75e",
+        "from_state": "draft",
+        "to_state": "published",
+        "action": "publish",
+        "expected": "success",
+        "status": "pass",
+        "message": "Successfully transitioned from draft to published",
+        "duration_ms": 148.19574356079102,
+        "timestamp": "2025-06-17T20:20:36.643474"
+      },
+      {
+        "id": "3f84c3d9",
+        "from_state": "published",
+        "to_state": "edited",
+        "action": "edit",
+        "expected": "success",
+        "status": "pass",
+        "message": "Successfully transitioned from published to edited",
+        "duration_ms": 160.65502166748047,
+        "timestamp": "2025-06-17T20:20:36.804496"
+      },
+      {
+        "id": "7a0095ab",
+        "from_state": "published",
+        "to_state": "deleted",
+        "action": "delete",
+        "expected": "success",
+        "status": "pass",
+        "message": "Successfully transitioned from published to deleted",
+        "duration_ms": 129.6076774597168,
+        "timestamp": "2025-06-17T20:20:36.934447"
+      },
+      {
+        "id": "8583634b",
+        "from_state": "deleted",
+        "to_state": "published",
+        "action": "restore",
+        "expected": "success",
+        "status": "pass",
+        "message": "Successfully transitioned from deleted to published",
+        "duration_ms": 101.34649276733398,
+        "timestamp": "2025-06-17T20:20:37.036088"
+      }
+    ],
+    "timestamp": "2025-06-17T20:20:36.378550",
+    "success_rate": 1.0,
+    "status": "pass"
+  },
+  {
+    "name": "User Relationship State Transitions",
+    "description": "Test transitions between user relationship states",
+    "transition_results": [
+      {
+        "id": "eca07662",
+        "from_state": "strangers",
+        "to_state": "following",
+        "action": "follow",
+        "expected": "success",
+        "status": "pass",
+        "message": "Successfully transitioned from strangers to following",
+        "duration_ms": 145.80535888671875,
+        "timestamp": "2025-06-17T20:20:37.182772"
+      },
+      {
+        "id": "728c86c2",
+        "from_state": "following",
+        "to_state": "strangers",
+        "action": "unfollow",
+        "expected": "success",
+        "status": "fail",
+        "message": "Failed to transition from following to strangers",
+        "duration_ms": 186.4321231842041,
+        "timestamp": "2025-06-17T20:20:37.369557"
+      },
+      {
+        "id": "87cf33af",
+        "from_state": "following",
+        "to_state": "blocked",
+        "action": "block",
+        "expected": "success",
+        "status": "pass",
+        "message": "Successfully transitioned from following to blocked",
+        "duration_ms": 176.835298538208,
+        "timestamp": "2025-06-17T20:20:37.546716"
+      },
+      {
+        "id": "af265e08",
+        "from_state": "blocked",
+        "to_state": "strangers",
+        "action": "unblock",
+        "expected": "success",
+        "status": "pass",
+        "message": "Successfully transitioned from blocked to strangers",
+        "duration_ms": 143.57352256774902,
+        "timestamp": "2025-06-17T20:20:37.690661"
+      }
+    ],
+    "timestamp": "2025-06-17T20:20:37.036852",
+    "success_rate": 0.75,
+    "status": "partial"
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "journey": "Group Interaction",
+  "scenario": "Error Handling - Group Interaction",
+  "steps_total": 3,
+  "steps_passed": 3,
+  "success_rate": 1.0,
+  "status": "pass",
+  "step_results": [
+    {
+      "id": "29255f4a",
+      "action": "Invalid Create new group",
+      "method": "POST",
+      "path": "/groups",
+      "input": {
+        "id": 9999
+      },
+      "expected_result": "Error",
+      "status_code": 400,
+      "response": {
+        "success": false,
+        "message": "Operation failed"
+      },
+      "duration_ms": 192.77167320251465,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:35.381791"
+    },
+    {
+      "id": "4c7904ad",
+      "action": "Invalid Join group",
+      "method": "POST",
+      "path": "/groups/<int:group_id>/join",
+      "input": {
+        "id": 9999
+      },
+      "expected_result": "Error",
+      "status_code": 400,
+      "response": {
+        "success": false,
+        "message": "Operation failed"
+      },
+      "duration_ms": 152.1315574645996,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:35.534313"
+    },
+    {
+      "id": "21e5565f",
+      "action": "Invalid Leave group",
+      "method": "POST",
+      "path": "/groups/<int:group_id>/leave",
+      "input": {
+        "id": 9999
+      },
+      "expected_result": "Error",
+      "status_code": 400,
+      "response": {
+        "success": false,
+        "message": "Operation failed"
+      },
+      "duration_ms": 141.44420623779297,
+      "status": "pass",
+      "timestamp": "2025-06-17T20:20:35.676105"
+    }
+  ],
+  "timestamp": "2025-06-17T20:20:35.676146"
+}

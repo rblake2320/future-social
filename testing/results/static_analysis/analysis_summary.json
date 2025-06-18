@@ -1,0 +1,87 @@
+{
+  "timestamp": "2025-06-17T20:12:37.984420",
+  "tools_run": 7,
+  "success_count": 3,
+  "issue_count": 3,
+  "error_count": 0,
+  "overall_status": "issues_found",
+  "results": {
+    "bandit": {
+      "tool": "bandit",
+      "timestamp": "2025-06-17T20:12:19.307816",
+      "status": "issues_found",
+      "high_severity_issues": 5,
+      "medium_severity_issues": 0,
+      "low_severity_issues": 0,
+      "total_issues": 5,
+      "output_file": "/home/ubuntu/fs_project/testing/results/static_analysis/bandit_results.json",
+      "return_code": 1
+    },
+    "flake8": {
+      "tool": "flake8",
+      "timestamp": "2025-06-17T20:12:19.581719",
+      "status": "issues_found",
+      "error_count": 136,
+      "warning_count": 76,
+      "output_file": "/home/ubuntu/fs_project/testing/results/static_analysis/flake8_results.txt",
+      "return_code": 1
+    },
+    "radon": {
+      "tool": "radon",
+      "timestamp": "2025-06-17T20:12:19.657881",
+      "status": "success",
+      "total_functions": 0,
+      "complexity_distribution": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0
+      },
+      "high_complexity_percentage": 0,
+      "output_files": {
+        "cyclomatic_complexity": "/home/ubuntu/fs_project/testing/results/static_analysis/radon_cc_results.json",
+        "maintainability_index": "/home/ubuntu/fs_project/testing/results/static_analysis/radon_mi_results.json",
+        "raw_metrics": "/home/ubuntu/fs_project/testing/results/static_analysis/radon_raw_results.json"
+      }
+    },
+    "mypy": {
+      "tool": "mypy",
+      "timestamp": "2025-06-17T20:12:20.939172",
+      "status": "issues_found",
+      "error_count": 1,
+      "output_file": "/home/ubuntu/fs_project/testing/results/static_analysis/mypy_results.txt",
+      "return_code": 2
+    },
+    "dependency_graph": {
+      "tool": "pydeps",
+      "timestamp": "2025-06-17T20:12:22.443017",
+      "status": "warning",
+      "generated_graphs": {},
+      "graph_count": 0
+    },
+    "safety": {
+      "tool": "safety",
+      "timestamp": "2025-06-17T20:12:34.690407",
+      "status": "success",
+      "vulnerability_count": 0,
+      "requirements_files_checked": [
+        "/home/ubuntu/fs_project/src/user_service/requirements.txt",
+        "/home/ubuntu/fs_project/src/post_service/requirements.txt",
+        "/home/ubuntu/fs_project/src/messaging_service/requirements.txt",
+        "/home/ubuntu/fs_project/src/group_service/requirements.txt",
+        "/home/ubuntu/fs_project/src/ai_sandbox_service/requirements.txt"
+      ],
+      "output_file": "/home/ubuntu/fs_project/testing/results/static_analysis/safety_results.json"
+    },
+    "pylint": {
+      "tool": "pylint",
+      "timestamp": "2025-06-17T20:12:37.982788",
+      "status": "success",
+      "score": null,
+      "output_file": "/home/ubuntu/fs_project/testing/results/static_analysis/pylint_results.txt",
+      "return_code": 30
+    }
+  }
+}

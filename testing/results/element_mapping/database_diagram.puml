@@ -1,0 +1,86 @@
+@startuml
+!theme plain
+title Future Social Database Schema
+
+entity "UserModel" as UserModel {
+  id: Column
+  username: Column
+  email: Column
+  password_hash: Column
+}
+
+entity "PostModel" as PostModel {
+  id: Column
+  user_id: Column
+  content_type: Column
+  text_content: Column
+  media_urls: Column
+  created_at: Column
+  updated_at: Column
+}
+
+entity "ConversationModel" as ConversationModel {
+  id: Column
+  participant_ids: Column
+  created_at: Column
+  last_message_at: Column
+}
+
+entity "MessageModel" as MessageModel {
+  id: Column
+  conversation_id: Column
+  sender_id: Column
+  text_content: Column
+  created_at: Column
+  conversation: relationship
+}
+
+entity "GroupModel" as GroupModel {
+  id: Column
+  name: Column
+  description: Column
+  creator_id: Column
+  created_at: Column
+  member_count: Column
+}
+
+entity "GroupMemberModel" as GroupMemberModel {
+  id: Column
+  group_id: Column
+  user_id: Column
+  role: Column
+  joined_at: Column
+  group: relationship
+  __table_args__: unknown
+}
+
+entity "LearningModuleModel" as LearningModuleModel {
+  id: Column
+  title: Column
+  description: Column
+  content_type: Column
+  content_url: Column
+  estimated_duration_minutes: Column
+  difficulty_level: Column
+  created_at: Column
+}
+
+entity "UserProgressModel" as UserProgressModel {
+  id: Column
+  user_id: Column
+  module_id: Column
+  status: Column
+  started_at: Column
+  completed_at: Column
+  module: relationship
+  __table_args__: unknown
+}
+
+entity "UserAIPreferenceModel" as UserAIPreferenceModel {
+  id: Column
+  user_id: Column
+  inferred_interests: Column
+  last_updated: Column
+}
+
+@enduml
