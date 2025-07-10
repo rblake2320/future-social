@@ -1,7 +1,8 @@
 import os
+from datetime import datetime
 from flask import Flask, request, jsonify
-from flask_sqlalchemy import SQLAlchemy
-from .models import db, PostModel # Assuming models.py is in the same directory
+from .models import db, PostModel  # Assuming models.py is in the same directory
+
 
 def create_post_app(database_uri=None):
     app = Flask(__name__)
@@ -11,7 +12,7 @@ def create_post_app(database_uri=None):
     else:
         app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get(
             "DATABASE_URL", "postgresql://user:password@localhost:5432/fs_db"
-        ) # Ensure this matches your actual DB setup or use a default for dev
+        )  # Ensure this matches your actual DB setup or use a default for dev
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
     db.init_app(app)
@@ -20,10 +21,14 @@ def create_post_app(database_uri=None):
     @app.route("/posts", methods=["POST"])
     def create_post():
         data = request.get_json()
-        user_id = data.get("user_id") # In a real system, this would come from auth token
+        user_id = data.get(
+            "user_id"
+        )  # In a real system, this would come from auth token
         text_content = data.get("text_content")
         media_urls = data.get("media_urls")
         content_type = data.get("content_type", "text")
+        created_at_raw = data.get("created_at")
+        created_at = datetime.fromisoformat(created_at_raw) if created_at_raw else None
 
         if not user_id:
             return jsonify({"message": "User ID is required"}), 400
@@ -31,15 +36,18 @@ def create_post_app(database_uri=None):
             return jsonify({"message": "Post cannot be empty"}), 400
 
         new_post = PostModel(
-            user_id=user_id, 
-            text_content=text_content, 
-            media_urls=media_urls, 
-            content_type=content_type
+            user_id=user_id,
+            text_content=text_content,
+            media_urls=media_urls,
+            content_type=content_type,
         )
+        if created_at:
+            new_post.created_at = created_at
+            new_post.updated_at = created_at
         try:
             new_post.save_to_db()
             return jsonify(new_post.to_json()), 201
-        except Exception as e:
+        except Exception:
             # Log e
             return jsonify({"message": "Something went wrong creating post"}), 500
 
@@ -65,11 +73,11 @@ def create_post_app(database_uri=None):
         post.text_content = data.get("text_content", post.text_content)
         post.media_urls = data.get("media_urls", post.media_urls)
         post.content_type = data.get("content_type", post.content_type)
-        
+
         try:
-            post.save_to_db() # SQLAlchemy handles update on commit if object is tracked
+            post.save_to_db()  # SQLAlchemy handles update on commit if object is tracked
             return jsonify(post.to_json()), 200
-        except Exception as e:
+        except Exception:
             # Log e
             return jsonify({"message": "Something went wrong updating post"}), 500
 
@@ -87,7 +95,7 @@ def create_post_app(database_uri=None):
         try:
             post.delete_from_db()
             return jsonify({"message": "Post deleted successfully"}), 200
-        except Exception as e:
+        except Exception:
             # Log e
             return jsonify({"message": "Something went wrong deleting post"}), 500
 
@@ -106,11 +114,11 @@ def create_post_app(database_uri=None):
 
     return app
 
+
 if __name__ == "__main__":
     # This part is for running the app directly for development/testing
     # It won't be used when running with a proper WSGI server like Gunicorn
-    app = create_post_app("sqlite:///:memory:") # Example for in-memory SQLite
+    app = create_post_app("sqlite:///:memory:")  # Example for in-memory SQLite
     with app.app_context():
-        db.create_all() # Create tables if they don't exist
-    app.run(port=5002, debug=True) # Running on a different port
-
+        db.create_all()  # Create tables if they don't exist
+    app.run(port=5002, debug=True)  # Running on a different port

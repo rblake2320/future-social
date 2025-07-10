@@ -1,7 +1,13 @@
 import unittest
 import json
-from src.messaging_service.app import create_messaging_app # Adjusted import
-from src.messaging_service.models import db, ConversationModel, MessageModel # Adjusted import
+from datetime import datetime
+from src.messaging_service.app import create_messaging_app  # Adjusted import
+from src.messaging_service.models import (
+    db,
+    ConversationModel,
+    MessageModel,
+)  # Adjusted import
+
 
 class MessagingServiceTestCase(unittest.TestCase):
     def setUp(self):
@@ -23,14 +29,23 @@ class MessagingServiceTestCase(unittest.TestCase):
         return self.client.post(
             "/conversations",
             data=json.dumps({"participant_ids": participant_ids}),
-            content_type="application/json"
+            content_type="application/json",
         )
 
-    def _send_message(self, conversation_id, sender_id, text_content):
+    def _send_message(
+        self,
+        conversation_id,
+        sender_id,
+        text_content,
+        created_at=None,
+    ):
+        payload = {"sender_id": sender_id, "text_content": text_content}
+        if created_at:
+            payload["created_at"] = created_at
         return self.client.post(
             f"/conversations/{conversation_id}/messages",
-            data=json.dumps({"sender_id": sender_id, "text_content": text_content}),
-            content_type="application/json"
+            data=json.dumps(payload),
+            content_type="application/json",
         )
 
     def test_create_new_conversation_success(self):
@@ -38,7 +53,9 @@ class MessagingServiceTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 201)
         data = json.loads(response.get_data(as_text=True))
         self.assertIn("id", data)
-        self.assertEqual(sorted(data["participant_ids"]), sorted([self.user1_id, self.user2_id]))
+        self.assertEqual(
+            sorted(data["participant_ids"]), sorted([self.user1_id, self.user2_id])
+        )
         # Verify it's in the DB
         self.assertIsNotNone(ConversationModel.find_by_id(data["id"]))
 
@@ -46,17 +63,24 @@ class MessagingServiceTestCase(unittest.TestCase):
         # Create one first
         create_response = self._create_conversation([self.user1_id, self.user2_id])
         created_data = json.loads(create_response.get_data(as_text=True))
-        
+
         # Attempt to create/get again with same participants
-        get_response = self._create_conversation([self.user2_id, self.user1_id]) # Order shouldn't matter for 2 users
+        get_response = self._create_conversation(
+            [self.user2_id, self.user1_id]
+        )  # Order shouldn't matter for 2 users
         self.assertEqual(get_response.status_code, 200)
         get_data = json.loads(get_response.get_data(as_text=True))
         self.assertEqual(get_data["id"], created_data["id"])
 
     def test_create_conversation_invalid_participants(self):
-        response = self._create_conversation([self.user1_id]) # Less than 2 participants
+        response = self._create_conversation(
+            [self.user1_id]
+        )  # Less than 2 participants
         self.assertEqual(response.status_code, 400)
-        self.assertIn("Valid participant_ids list (at least 2) is required", response.get_data(as_text=True))
+        self.assertIn(
+            "Valid participant_ids list (at least 2) is required",
+            response.get_data(as_text=True),
+        )
 
     def test_send_message_success(self):
         conv_response = self._create_conversation([self.user1_id, self.user2_id])
@@ -84,34 +108,47 @@ class MessagingServiceTestCase(unittest.TestCase):
         conv_response = self._create_conversation([self.user1_id, self.user2_id])
         conv_id = json.loads(conv_response.get_data(as_text=True))["id"]
 
-        msg_response = self._send_message(conv_id, self.user3_id, "Intruder message") # user3 is not in conv
+        msg_response = self._send_message(
+            conv_id, self.user3_id, "Intruder message"
+        )  # user3 is not in conv
         self.assertEqual(msg_response.status_code, 403)
-        self.assertIn("Sender not part of this conversation", msg_response.get_data(as_text=True))
+        self.assertIn(
+            "Sender not part of this conversation", msg_response.get_data(as_text=True)
+        )
 
     def test_send_message_missing_fields(self):
         conv_response = self._create_conversation([self.user1_id, self.user2_id])
         conv_id = json.loads(conv_response.get_data(as_text=True))["id"]
         response = self.client.post(
             f"/conversations/{conv_id}/messages",
-            data=json.dumps({"sender_id": self.user1_id}), # Missing text_content
-            content_type="application/json"
+            data=json.dumps({"sender_id": self.user1_id}),  # Missing text_content
+            content_type="application/json",
         )
         self.assertEqual(response.status_code, 400)
-        self.assertIn("Sender ID and text content are required", response.get_data(as_text=True))
+        self.assertIn(
+            "Sender ID and text content are required", response.get_data(as_text=True)
+        )
 
     def test_get_messages_success(self):
         conv_response = self._create_conversation([self.user1_id, self.user2_id])
         conv_id = json.loads(conv_response.get_data(as_text=True))["id"]
 
-        self._send_message(conv_id, self.user1_id, "Message 1")
-        import time; time.sleep(0.01) # Ensure order
-        self._send_message(conv_id, self.user2_id, "Message 2")
+        ts1 = datetime(2023, 1, 1, 0, 0, 1)
+        ts2 = datetime(2023, 1, 1, 0, 0, 2)
+        self._send_message(
+            conv_id, self.user1_id, "Message 1", created_at=ts1.isoformat()
+        )
+        self._send_message(
+            conv_id, self.user2_id, "Message 2", created_at=ts2.isoformat()
+        )
 
         get_msg_response = self.client.get(f"/conversations/{conv_id}/messages")
         self.assertEqual(get_msg_response.status_code, 200)
         messages = json.loads(get_msg_response.get_data(as_text=True))
         self.assertEqual(len(messages), 2)
-        self.assertEqual(messages[0]["text_content"], "Message 1") # Ordered by asc created_at
+        self.assertEqual(
+            messages[0]["text_content"], "Message 1"
+        )  # Ordered by asc created_at
         self.assertEqual(messages[1]["text_content"], "Message 2")
 
     def test_get_messages_conversation_not_found(self):
@@ -122,19 +159,26 @@ class MessagingServiceTestCase(unittest.TestCase):
         # Conv 1: user1 and user2
         conv1_response = self._create_conversation([self.user1_id, self.user2_id])
         conv1_id = json.loads(conv1_response.get_data(as_text=True))["id"]
-        self._send_message(conv1_id, self.user1_id, "Hi user2 from user1")
-        import time; time.sleep(0.01)
+        ts1 = datetime(2023, 1, 1, 0, 0, 1)
+        self._send_message(
+            conv1_id, self.user1_id, "Hi user2 from user1", created_at=ts1.isoformat()
+        )
 
         # Conv 2: user1 and user3
         conv2_response = self._create_conversation([self.user1_id, self.user3_id])
         conv2_id = json.loads(conv2_response.get_data(as_text=True))["id"]
-        self._send_message(conv2_id, self.user3_id, "Hi user1 from user3")
-        import time; time.sleep(0.01)
+        ts2 = datetime(2023, 1, 1, 0, 0, 2)
+        self._send_message(
+            conv2_id, self.user3_id, "Hi user1 from user3", created_at=ts2.isoformat()
+        )
 
         # Conv 3: user2 and user3 (user1 not involved)
         conv3_response = self._create_conversation([self.user2_id, self.user3_id])
         conv3_id = json.loads(conv3_response.get_data(as_text=True))["id"]
-        self._send_message(conv3_id, self.user2_id, "Hi user3 from user2")
+        ts3 = datetime(2023, 1, 1, 0, 0, 3)
+        self._send_message(
+            conv3_id, self.user2_id, "Hi user3 from user2", created_at=ts3.isoformat()
+        )
 
         # Get conversations for user1
         response = self.client.get(f"/users/{self.user1_id}/conversations")
@@ -154,6 +198,6 @@ class MessagingServiceTestCase(unittest.TestCase):
         self.assertEqual(user2_convs[0]["id"], conv3_id)
         self.assertEqual(user2_convs[1]["id"], conv1_id)
 
+
 if __name__ == "__main__":
     unittest.main()
-
